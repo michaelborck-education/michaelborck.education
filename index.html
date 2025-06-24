@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Tools Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+                .card-hover:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                }
+            
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Educational Tools Collection</h1>
+            <p class="text-xl opacity-90">A comprehensive suite of tools for teaching, learning, and educational content creation</p>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="bg-white py-6 shadow-sm sticky top-0 z-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search by name, description, or topic..." 
+                           class="w-full px-4 py-3 pl-12 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 focus:bg-white">
+                    <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+                </div>
+                <div id="searchResults" class="mt-2 text-sm text-gray-600"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <nav class="bg-gray-50 py-4 border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-2 justify-center">
+                <button onclick="filterByCategory('all')" class="category-btn px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition" data-category="all">All Projects</button>
+                <button onclick="filterByCategory('desktop-application')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="desktop-application">Desktop Application</button> <button onclick="filterByCategory('web-application')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="web-application">Web Application</button> <button onclick="filterByCategory('python-package')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="python-package">Python Package</button> <button onclick="filterByCategory('learning-resource')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="learning-resource">Learning Resource</button> <button onclick="filterByCategory('infrastructure-tool')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="infrastructure-tool">Infrastructure Tool</button> <button onclick="filterByCategory('command-line-tool')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="command-line-tool">Command Line Tool</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        
+        <section id="desktop-application" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-desktop text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Desktop Application</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="deep-talk"
+                     data-description="desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design"
+                     data-topics="ai-powered-transcription cross-platform desktop-app ffmpeg local-processing natural-language-processing privacy-first typescript audio-video-processing">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">deep-talk</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                1
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Desktop app for AI-powered transcription and analysis of audio/video files with local processing and privacy-first design</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/deep-talk" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/deep-talk/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    <div class="mt-3"><div class="text-xs text-gray-500 mb-1">Version v0.1.1</div><div class="flex gap-2"><a href="https://github.com/michael-borck/deep-talk/releases/download/untagged-1432a0fbf42d66ab31cc/LocalListen-1.0.0.AppImage" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-linux"></i></a><a href="https://github.com/michael-borck/deep-talk/releases/download/untagged-1432a0fbf42d66ab31cc/LocalListen-1.0.0.dmg" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-apple"></i></a><a href="https://github.com/michael-borck/deep-talk/releases/download/untagged-1432a0fbf42d66ab31cc/LocalListen.Setup.1.0.0.exe" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-windows"></i></a></div></div>
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-powered-transcription</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cross-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#desktop-app</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ffmpeg</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#local-processing</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="case-crafter"
+                     data-description="intelligent case study generator that helps educators craft engaging business scenarios with ai-powered customisation"
+                     data-topics="ai cross-platform education-tools material-ui react rust sqlite tauri typescript case-study-generator">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">case-crafter</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Intelligent case study generator that helps educators craft engaging business scenarios with AI-powered customisation</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/case-crafter" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cross-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#education-tools</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#material-ui</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#react</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Rust</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Shell</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="character-craft-lite"
+                     data-description="create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai."
+                     data-topics="chatbot conversational-ai electron prompt-engineering rag-pipeline react tailwind-css typescript vite zustand">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">character-craft-lite</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Create structured chatbot personalities for zero-shot prompts, RAG pipelines, and conversational AI.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/character-craft-lite" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/character-craft-lite/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#chatbot</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#conversational-ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#electron</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#prompt-engineering</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#rag-pipeline</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="critique-quest"
+                     data-description="desktop application for generating ai-powered educational case studies with support for   openai, anthropic, google gemini, and local ollama models"
+                     data-topics="ai-generation case-studies cli-tool critical-thinking education electron google-gemini gpt-4 local-models machine-learning">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">critique-quest</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Desktop application for generating AI-powered educational case studies with support for   OpenAI, Anthropic, Google Gemini, and local Ollama models</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/critique-quest" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/critique-quest/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    <div class="mt-3"><div class="text-xs text-gray-500 mb-1">Version v1.0.7</div><div class="flex gap-2"><a href="https://github.com/michael-borck/critique-quest/releases/download/v1.0.7/CritiqueQuest-1.0.7.AppImage" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-linux"></i></a><a href="https://github.com/michael-borck/critique-quest/releases/download/v1.0.7/CritiqueQuest-1.0.7.dmg" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-apple"></i></a><a href="https://github.com/michael-borck/critique-quest/releases/download/v1.0.7/CritiqueQuest.Setup.1.0.7.exe" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-windows"></i></a></div></div>
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-generation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#case-studies</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#critical-thinking</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#education</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="curriculum-curator"
+                     data-description=""
+                     data-topics="configuration eslint front-end react rust template typescript vite web-development">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">curriculum-curator</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">No description available</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/curriculum-curator" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/curriculum-curator/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#configuration</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#eslint</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#front-end</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#react</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#rust</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Rust</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="insight-lens"
+                     data-description="desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights. built with electron for windows, macos, and linux."
+                     data-topics="ai-assistant charts cross-platform data-visualization desktop-app education electron lecturers pdf-processing react sqlite survey-analysis typescript university">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">insight-lens</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Desktop survey analysis tool for university lecturers. Import PDF reports, visualise trends, and get AI-powered insights. Built with Electron for Windows, macOS, and Linux.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/insight-lens" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        <a href="https://michael-borck.github.io/insight-lens/" class="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200"><i class="fas fa-globe mr-1"></i>Website</a>
+                        <a href="https://michael-borck.github.io/insight-lens/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    <div class="mt-3"><div class="text-xs text-gray-500 mb-1">Version v1.0.0</div><div class="flex gap-2"><a href="https://github.com/michael-borck/insight-lens/releases/download/v1.0.0/InsightLens-1.0.0-universal.dmg" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-apple"></i></a><a href="https://github.com/michael-borck/insight-lens/releases/download/v1.0.0/InsightLens-1.0.0.AppImage" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-linux"></i></a><a href="https://github.com/michael-borck/insight-lens/releases/download/v1.0.0/InsightLens.Setup.1.0.0.exe" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-windows"></i></a></div></div>
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-assistant</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#charts</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cross-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-visualization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#desktop-app</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="study-buddy"
+                     data-description="study buddy is a desktop application that provides ai tutoring without requiring internet access or accounts"
+                     data-topics="ai-tutor css desktop-application electron javascript local-inference privacy-focused typescript offline-application">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">study-buddy</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Study Buddy is a desktop application that provides AI tutoring without requiring internet access or accounts</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/study-buddy" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-tutor</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#css</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#desktop-application</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#electron</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#javascript</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="swipe-verse"
+                     data-description="configure, play, transform - enter a universe of your making"
+                     data-topics="card-game cross-platform data-driven flet mobile-first multiverse python resource-management theme-based">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">swipe-verse</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Configure, Play, Transform - Enter a Universe of Your Making</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/swipe-verse" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#card-game</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cross-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-driven</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#flet</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#mobile-first</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Makefile</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="talk-buddy"
+                     data-description="your ai talking partner. practice english conversations and ace interviews with real-time voice ai."
+                     data-topics="ai conversation-practice cross-platform electron english-learning interview-prep natural-language-processing speech-recognition text-to-speech typescript">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">talk-buddy</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Your AI Talking Partner. Practice English conversations and ace interviews with real-time voice AI.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/talk-buddy" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/talk-buddy/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    <div class="mt-3"><div class="text-xs text-gray-500 mb-1">Version v2.3.3</div><div class="flex gap-2"><a href="https://github.com/michael-borck/talk-buddy/releases/download/untagged-e774d31b0ccf1cd4d931/latest-mac.yml" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-apple"></i></a><a href="https://github.com/michael-borck/talk-buddy/releases/download/untagged-e774d31b0ccf1cd4d931/latest-linux.yml" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-linux"></i></a><a href="https://github.com/michael-borck/talk-buddy/releases/download/untagged-e774d31b0ccf1cd4d931/ChatterBox-Setup-2.3.3.exe.blockmap" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-windows"></i></a></div></div>
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#conversation-practice</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cross-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#electron</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#english-learning</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="desktop-application"
+                     data-name="venture-lab"
+                     data-description="ai-powered tools for business innovation and entrepreneurship education"
+                     data-topics="ai business-innovation desktop-application education entrepreneurship html javascript market-research rust pitch-presentation">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">venture-lab</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">AI-powered tools for business innovation and entrepreneurship education</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/venture-lab" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/venture-lab/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    <div class="mt-3"><div class="text-xs text-gray-500 mb-1">Version v1.0.0</div><div class="flex gap-2"><a href="https://github.com/michael-borck/venture-lab/releases/download/untagged-ec2db296e8a6ae200f11/VentureLab_x64.app.tar.gz" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-linux"></i></a><a href="https://github.com/michael-borck/venture-lab/releases/download/untagged-ec2db296e8a6ae200f11/VentureLab_1.0.0_x64.dmg" class="text-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-full transition"><i class="fab fa-apple"></i></a></div></div>
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#business-innovation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#desktop-application</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#education</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#entrepreneurship</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Rust</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="web-application" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-globe text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Web Application</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="capstone-connect"
+                     data-description="a web-based project management system that connects curtin university students with industry clients for capstone projects, featuring project browsing, interest tracking, and administrative oversight"
+                     data-topics="capstone-projects industry-collaboration input-validation javascript jwt-authentication project-management security sqlite student-portal web-application">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">capstone-connect</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A web-based project management system that connects Curtin University students with industry clients for capstone projects, featuring project browsing, interest tracking, and administrative oversight</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/capstone-connect" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/capstone-connect/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#capstone-projects</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#industry-collaboration</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#input-validation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#javascript</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#jwt-authentication</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="class-pulse"
+                     data-description="a real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales for audience engagement with instant visualised results"
+                     data-topics="audience-engagement data-visualization flask html interactive-presentation python qr-code real-time user-management">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">class-pulse</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales for audience engagement with instant visualised results</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/class-pulse" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/class-pulse/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#audience-engagement</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-visualization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#flask</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#html</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#interactive-presentation</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Makefile</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="cloudcore"
+                     data-description="a github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis and design."
+                     data-topics="css cybersecurity educational-platform javascript lua quarto static-site-generator systems-analysis web-design">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">cloudcore</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A GitHub repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis and design.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/cloudcore" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="http://cloudcore.serveur.au/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#css</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cybersecurity</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#educational-platform</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#javascript</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#lua</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Lua</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="deep-brief"
+                     data-description="a video analysis application that helps students, educators, and professionals analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback. the app processes videos to provide actionable insights on speaking performance, visual effectiveness, and overall presentation quality."
+                     data-topics="ai-feedback cli-tool computer-vision python speech-recognition video-analysis web-application presentation-analysis">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">deep-brief</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A video analysis application that helps students, educators, and professionals analyze presentations by combining speech transcription, visual analysis, and AI-powered feedback. The app processes videos to provide actionable insights on speaking performance, visual effectiveness, and overall presentation quality.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/deep-brief" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-feedback</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#computer-vision</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#speech-recognition</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="docslanding"
+                     data-description="jekyll theme for script-generated landing pages + auto-docs"
+                     data-topics="dark-mode documentation github-pages jekyll landing-page responsive-design script-generation seo tailwind-css">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">docslanding</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Jekyll theme for script-generated landing pages + auto-docs</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/docslanding" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#dark-mode</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#documentation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#github-pages</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#jekyll</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#landing-page</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="feed-forward"
+                     data-description="feedforward: elevate your learning. transforming feedback into a path to success"
+                     data-topics="ai education fastapi feedback git python shell sqlite tailwindcss web-app">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">feed-forward</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">FeedForward: Elevate Your Learning. Transforming feedback into a path to success</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/feed-forward" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/feed-forward/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#education</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#fastapi</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#feedback</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#git</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Shell</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="lecturer-clone"
+                     data-description=""
+                     data-topics="ai education-technology fastapi media-production python react text-to-video video-generation voice-cloning">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">lecturer-clone</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">No description available</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/lecturer-clone" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#education-technology</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#fastapi</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#media-production</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="web-application"
+                     data-name="slinkr"
+                     data-description="a lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links—all in one spot."
+                     data-topics="css flask flask-bcrypt flask-login html python qr-code-generator tinydb url-expansion url-shortener">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">slinkr</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A lightweight URL toolkit that lets you shorten, expand, QR-ify, and validate links—all in one spot.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/slinkr" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#css</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#flask</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#flask-bcrypt</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#flask-login</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#html</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="python-package" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-python text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Python Package</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="python-package"
+                     data-name="sim-lab"
+                     data-description="a set of classes for simulating various business-related scenarios. it is designed for educational use, allowing students to experiment with modeling, analysis, and decision-making in different contexts."
+                     data-topics="agent-based-simulation business-simulation data-visualization discrete-event-simulation educational-tools modeling python simulation stochastic-processes system-dynamics">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">sim-lab</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                1
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A set of classes for simulating various business-related scenarios. It is designed for educational use, allowing students to experiment with modeling, analysis, and decision-making in different contexts.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/sim-lab" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/sim-lab/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#agent-based-simulation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#business-simulation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-visualization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#discrete-event-simulation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#educational-tools</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Shell</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="python-package"
+                     data-name="fetch-my-weather"
+                     data-description="a beginner-friendly python package for fetching weather data from wttr.in with built-in caching and error handling."
+                     data-topics="api beginner-friendly caching cli-tool educational json mini-projects pydantic python weather">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">fetch-my-weather</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A beginner-friendly Python package for fetching weather data from wttr.in with built-in caching and error handling.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/fetch-my-weather" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/fetch-my-weather/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#api</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#beginner-friendly</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#caching</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#educational</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Makefile</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="python-package"
+                     data-name="hands-on-ai"
+                     data-description="a lightweight python framework for building personality-driven ai bots in the classroom."
+                     data-topics="ai-education chatbots cli-tool natural-language-processing python react-framework retrieval-augmented-generation educational-toolkit">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">hands-on-ai</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A lightweight Python framework for building personality-driven AI bots in the classroom.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/hands-on-ai" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/hands-on-ai/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai-education</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#chatbots</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#natural-language-processing</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Just</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning-resource" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-graduation-cap text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Learning Resource</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="python-jumpstart"
+                     data-description="learn just enough python to effectively work with ai coding assistants - a   beginner-friendly guide to coding fundamentals in the ai era"
+                     data-topics="ai beginner-friendly control-flow data-structures exception-handling functions python testing text-manipulation coding-fundamentals">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">python-jumpstart</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                3
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1"><i class="fas fa-code-branch mr-1"></i>2</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Learn just enough Python to effectively work with AI coding assistants - a   beginner-friendly guide to coding fundamentals in the AI era</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/python-jumpstart" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/python-jumpstart/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#beginner-friendly</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#control-flow</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-structures</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#exception-handling</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TeX</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="intentional-prompting"
+                     data-description=""
+                     data-topics="ai css human-ai-interaction markdown programming-techniques quarto software-development tex">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">intentional-prompting</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">No description available</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/intentional-prompting" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/intentional-prompting/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#css</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#human-ai-interaction</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#markdown</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#programming-techniques</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TeX</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="programming-paradigms"
+                     data-description=""
+                     data-topics="calculator cli-tool functional-programming imperative-programming object-oriented-programming programming-paradigms python">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">programming-paradigms</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">No description available</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/programming-paradigms" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#calculator</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#functional-programming</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#imperative-programming</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#object-oriented-programming</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="python-dev-book"
+                     data-description="a comprehensive guide to python development practices from zero to production."
+                     data-topics="continuous-integration dependency-management documentation github-pages packaging python software-development static-analysis testing tex">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">python-dev-book</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A comprehensive guide to Python development practices from zero to production.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/python-dev-book" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/python-dev-book/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#continuous-integration</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#dependency-management</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#documentation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#github-pages</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#packaging</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TeX</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="the-absolute-minimum-you-must-know"
+                     data-description=""
+                     data-topics="cli-tool documentation git markdown programming-basics python self-directed-learning programming-career">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">the-absolute-minimum-you-must-know</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1"><i class="fas fa-code-branch mr-1"></i>1</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">No description available</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/the-absolute-minimum-you-must-know" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#documentation</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#git</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#markdown</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#programming-basics</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="learning-resource"
+                     data-name="the-calculator-walkthrough"
+                     data-description="an exercise in programming to help hone your skills through practice and repetition."
+                     data-topics="best-practices code-kata jupyter-notebook programming-practice python">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">the-calculator-walkthrough</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1"><i class="fas fa-code-branch mr-1"></i>2</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">An exercise in programming to help hone your skills through practice and repetition.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/the-calculator-walkthrough" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#best-practices</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#code-kata</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#jupyter-notebook</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#programming-practice</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Jupyter Notebook</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="infrastructure-tool" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-tools text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Infrastructure Tool</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="infrastructure-tool"
+                     data-name="electron-kit"
+                     data-description="professional electron app template with modular architecture"
+                     data-topics="data-visualization electron electron-builder notifications react sqlite tailwind-css typescript vector-search vite">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">electron-kit</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Professional Electron app template with modular architecture</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/electron-kit" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        <a href="https://michael-borck.github.io/electron-kit/" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-full hover:bg-green-200"><i class="fas fa-book-open mr-1"></i>Docs</a>
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-visualization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#electron</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#electron-builder</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#notifications</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#react</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">TypeScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="infrastructure-tool"
+                     data-name="headless-cms-react"
+                     data-description="a minimal react project scaffold that builds on headless cms concepts, enabling students to implement wordpress api integration using react hooks."
+                     data-topics="api-integration blog-application content-management headless-cms javascript react react-hooks react-router web-development wordpress-api">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">headless-cms-react</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A minimal React project scaffold that builds on headless CMS concepts, enabling students to implement WordPress API integration using React hooks.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/headless-cms-react" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#api-integration</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#blog-application</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#content-management</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#headless-cms</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#javascript</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="infrastructure-tool"
+                     data-name="headless-cms-vanilla"
+                     data-description="a scaffolded html/css/javascript project based on the headless wordpress proof of concept, providing structure for students to implement a retail product display."
+                     data-topics="content-management css frontend-development headless-cms html product-display rest-api vanilla-javascript web-development wordpress-api">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">headless-cms-vanilla</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A scaffolded HTML/CSS/JavaScript project based on the headless WordPress proof of concept, providing structure for students to implement a retail product display.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/headless-cms-vanilla" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#content-management</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#css</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#frontend-development</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#headless-cms</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#html</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">JavaScript</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="infrastructure-tool"
+                     data-name="sec-utils"
+                     data-description="provide security utilities in docker containers"
+                     data-topics="cli-tool docker docker-compose haproxy network-security security-utilities wireshark">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">sec-utils</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Provide security utilities in docker containers</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/sec-utils" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#docker</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#docker-compose</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#haproxy</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#network-security</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="infrastructure-tool"
+                     data-name="weatherwise-template"
+                     data-description="🌦️ kickstart your weatherwise assignment with this ready-to-use python template featuring ai prompts, weather data, and cool visualisations! 🧠📊"
+                     data-topics="ai data-visualization jupyter-notebook python starter-kit template weather">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">weatherwise-template</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1"><i class="fas fa-code-branch mr-1"></i>16</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">🌦️ Kickstart your WeatherWise assignment with this ready-to-use Python template featuring AI prompts, weather data, and cool visualisations! 🧠📊</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/weatherwise-template" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#data-visualization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#jupyter-notebook</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#starter-kit</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Jupyter Notebook</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="command-line-tool" class="mb-16">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-folder text-4xl text-purple-600 mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-800">Command Line Tool</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="command-line-tool"
+                     data-name="ask-docs"
+                     data-description="a general-purpose document assistant for any documentation using rag and llms like openai, claude, gemini, groq, and ollama."
+                     data-topics="cli-tool document-assistant llm openai python rag semantic-search text-ui web-app">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">ask-docs</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">A general-purpose document assistant for any documentation using RAG and LLMs like OpenAI, Claude, Gemini, Groq, and Ollama.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/ask-docs" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#document-assistant</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#llm</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#openai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">HTML</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="command-line-tool"
+                     data-name="gh-toolkit"
+                     data-description="github repository portfolio management and presentation toolkit with llm-powered categorization and beautiful site generation"
+                     data-topics="categorization cli-tool github llm portfolio-management python repository-management shell repository-health-checking topic-tagging">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">gh-toolkit</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">GitHub repository portfolio management and presentation toolkit with LLM-powered categorization and beautiful site generation</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/gh-toolkit" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#categorization</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#github</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#llm</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#portfolio-management</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Shell</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="command-line-tool"
+                     data-name="mark-mate"
+                     data-description="your ai teaching assistant for assignments and assessment."
+                     data-topics="ai assessment assignments cli-tool github grading litellm machine-learning python wordpress">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">mark-mate</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Your AI Teaching Assistant for Assignments and Assessment.</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/mark-mate" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#assessment</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#assignments</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#github</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">CSS</span> <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Jinja</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 repo-card" 
+                     data-category="command-line-tool"
+                     data-name="slide-stream"
+                     data-description="instantly turn your text, slides, or markdown notes into engaging videos with the power of ai"
+                     data-topics="ai cli-tool markdown-to-video natural-language-processing python text-to-speech video-creation image-sourcing powerpoint-to-video presentation-automation">
+                    
+                    
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800 flex items-center">
+                            <span class="text-2xl mr-2">🎓</span>
+                            <span class="repo-name">slide-stream</span>
+                        </h3>
+                        <div class="text-right">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                0
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-3 repo-description">Instantly turn your text, slides, or Markdown notes into engaging videos with the power of AI</p>
+                    
+                    
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="https://github.com/michael-borck/slide-stream" class="text-sm px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">
+                            <i class="fab fa-github mr-1"></i>GitHub
+                        </a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="mt-2 flex flex-wrap gap-1"><span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#ai</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#cli-tool</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#markdown-to-video</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#natural-language-processing</span> <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded-full">#python</span></div>
+                    
+                    <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+                        <div class="flex gap-3">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded">Python</span>
+                        </div>
+                        <span class="text-green-600"><i class="fas fa-balance-scale mr-1"></i>MIT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">Educational Tools Collection</p>
+            <p class="text-sm opacity-75">Last updated: June 24, 2025</p>
+            <div class="mt-4">
+                <a href="https://github.com" class="text-white hover:text-gray-200 mx-2">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Search and filter functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const allCards = document.querySelectorAll('.repo-card');
+        let currentCategory = 'all';
+
+        searchInput.addEventListener('input', function(e) {
+            const searchTerms = e.target.value.toLowerCase()
+                .split(' ')
+                .filter(term => term.length > 0);
+            
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                const matchesCategory = currentCategory === 'all' || 
+                    card.dataset.category === currentCategory;
+                
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (searchTerms.length > 0) {
+                const termText = searchTerms.length === 1 ? 'term' : 'terms';
+                searchResults.textContent = 
+                    `Found ${visibleCount} project${visibleCount !== 1 ? 's' : ''} matching all ${termText}`;
+            } else {
+                searchResults.textContent = '';
+            }
+        });
+
+        function filterByCategory(category) {
+            currentCategory = category;
+            
+            // Update button styles
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition';
+                } else {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition';
+                }
+            });
+            
+            // Filter cards
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const searchTerms = searchInput.value.toLowerCase()
+                    .split(' ')
+                    .filter(term => term.length > 0);
+                
+                const matchesCategory = category === 'all' || card.dataset.category === category;
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Smooth scroll to results
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Enhanced highlighting
+        searchInput.addEventListener('input', function(e) {
+            const searchTerms = e.target.value.toLowerCase()
+                .split(' ')
+                .filter(term => term.length > 2);
+            
+            document.querySelectorAll('.repo-name, .repo-description').forEach(elem => {
+                let html = elem.textContent;
+                
+                if (searchTerms.length > 0) {
+                    searchTerms.forEach(term => {
+                        const regex = new RegExp(`(${term})`, 'gi');
+                        html = html.replace(regex, '<mark class="bg-yellow-200">$1</mark>');
+                    });
+                    elem.innerHTML = html;
+                } else {
+                    elem.innerHTML = elem.textContent;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
