@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Perfect Teaching Toolkit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .quiz-header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .quiz-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .quiz-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .quiz-content {
+            padding: 30px;
+        }
+
+        .question {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .question.active {
+            display: block;
+        }
+
+        .question h3 {
+            color: #374151;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+
+        .question-number {
+            background: #e5e7eb;
+            color: #6b7280;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .option:hover {
+            border-color: #4f46e5;
+            background: #f8faff;
+            transform: translateY(-2px);
+        }
+
+        .option.selected {
+            border-color: #4f46e5;
+            background: #eef2ff;
+        }
+
+        .option input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .option-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .option-desc {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .btn {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            background: #4338ca;
+        }
+
+        .btn:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: #4b5563;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: #e5e7eb;
+            margin: 20px 0;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+        }
+
+        .results.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #0ea5e9;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+
+        .result-title {
+            color: #0c4a6e;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .result-description {
+            color: #0369a1;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .recommended-tools {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .recommended-tools h3 {
+            color: #374151;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .tool-grid {
+            display: grid;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tool-item {
+            background: #f8fafc;
+            border-left: 4px solid #4f46e5;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .tool-name {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .tool-desc {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .tool-category {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-top: 8px;
+        }
+
+        .categories-summary {
+            background: #f3f4f6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .categories-summary h4 {
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .category-tag {
+            background: #4f46e5;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .quiz-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .quiz-content {
+                padding: 20px;
+            }
+
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 2rem;
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #7c3aed;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <a href="index.html" class="back-link">← Back to Educational Tools</a>
+        
+        <div class="quiz-header">
+            <h1>Find Your Perfect Teaching Toolkit</h1>
+            <p>Discover which educational tools best match your teaching style and needs</p>
+        </div>
+
+        <div class="quiz-content">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <!-- Question 1 -->
+            <div class="question active" id="question-1">
+                <div class="question-number">Question 1 of 8</div>
+                <h3>What best describes your primary teaching environment?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="k12">
+                        <div class="option-title">K-12 Classroom</div>
+                        <div class="option-desc">Teaching younger students in structured classroom settings</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="university">
+                        <div class="option-title">University/College</div>
+                        <div class="option-desc">Teaching adult learners in higher education environments</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="corporate">
+                        <div class="option-title">Corporate Training</div>
+                        <div class="option-desc">Professional development and workplace training</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="self_directed">
+                        <div class="option-title">Self-Directed Learning</div>
+                        <div class="option-desc">Creating resources for independent learners</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="question-2">
+                <div class="question-number">Question 2 of 8</div>
+                <h3>Which subject area best describes your teaching focus?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="technology">
+                        <div class="option-title">STEM/Technology</div>
+                        <div class="option-desc">Programming, coding, technical skills, and STEM subjects</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="business">
+                        <div class="option-title">Business/Entrepreneurship</div>
+                        <div class="option-desc">Business skills, entrepreneurship, and professional development</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="communication">
+                        <div class="option-title">Languages/Communication</div>
+                        <div class="option-desc">Language learning, communication skills, and presentation abilities</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="general">
+                        <div class="option-title">General/Multi-disciplinary</div>
+                        <div class="option-desc">Broad educational topics or multiple subject areas</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="question-3">
+                <div class="question-number">Question 3 of 8</div>
+                <h3>How would you describe your technical comfort level?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="beginner">
+                        <div class="option-title">Beginner</div>
+                        <div class="option-desc">I prefer simple, ready-to-use tools with minimal setup</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="intermediate">
+                        <div class="option-title">Intermediate</div>
+                        <div class="option-desc">I'm comfortable with some configuration and learning new interfaces</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="advanced">
+                        <div class="option-title">Advanced</div>
+                        <div class="option-desc">I enjoy technical challenges and complex tool setups</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="expert">
+                        <div class="option-title">Expert</div>
+                        <div class="option-desc">I can handle sophisticated configurations and custom implementations</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="question-4">
+                <div class="question-number">Question 4 of 8</div>
+                <h3>When creating educational content, your main focus is:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q4" value="interactive">
+                        <div class="option-title">Interactive presentations and visual materials</div>
+                        <div class="option-desc">Creating engaging, multimedia content that captivates learners</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="analysis">
+                        <div class="option-title">Detailed analysis and case studies</div>
+                        <div class="option-desc">Developing comprehensive analytical content and real-world examples</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="technical">
+                        <div class="option-title">Hands-on coding and technical tutorials</div>
+                        <div class="option-desc">Building practical, technical learning experiences</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="ai_powered">
+                        <div class="option-title">AI-powered content and personalization</div>
+                        <div class="option-desc">Leveraging AI to create adaptive and personalized learning materials</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="question-5">
+                <div class="question-number">Question 5 of 8</div>
+                <h3>Your preferred approach to student engagement is:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q5" value="realtime">
+                        <div class="option-title">Real-time interaction and polling</div>
+                        <div class="option-desc">Live engagement with immediate feedback and participation</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="project_based">
+                        <div class="option-title">Project-based learning with industry connections</div>
+                        <div class="option-desc">Connecting students with real-world projects and professional experiences</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="tutoring">
+                        <div class="option-title">One-on-one tutoring and personalized guidance</div>
+                        <div class="option-desc">Providing individualized support and mentoring</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="self_paced">
+                        <div class="option-title">Self-paced learning with comprehensive resources</div>
+                        <div class="option-desc">Creating rich resource libraries for independent exploration</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question" id="question-6">
+                <div class="question-number">Question 6 of 8</div>
+                <h3>How do you prefer to analyze student performance?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q6" value="data_analysis">
+                        <div class="option-title">Detailed data analysis and trend visualization</div>
+                        <div class="option-desc">Using comprehensive analytics to understand learning patterns</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="ai_insights">
+                        <div class="option-title">AI-powered insights and recommendations</div>
+                        <div class="option-desc">Leveraging artificial intelligence for intelligent assessment</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="realtime_feedback">
+                        <div class="option-title">Real-time feedback during presentations</div>
+                        <div class="option-desc">Immediate assessment and guidance during learning activities</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="project_outcomes">
+                        <div class="option-title">Project outcomes and practical applications</div>
+                        <div class="option-desc">Evaluating success through real-world project results</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question" id="question-7">
+                <div class="question-number">Question 7 of 8</div>
+                <h3>How much time are you willing to invest in learning new tools?</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q7" value="minimal">
+                        <div class="option-title">Minimal setup - ready to use immediately</div>
+                        <div class="option-desc">I need tools that work out of the box with no configuration</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="moderate">
+                        <div class="option-title">Moderate setup - willing to learn basics</div>
+                        <div class="option-desc">I can invest time to learn fundamental features and setup</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="significant">
+                        <div class="option-title">Significant investment - enjoy learning complex tools</div>
+                        <div class="option-desc">I'm excited to master sophisticated tools with advanced features</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="ongoing">
+                        <div class="option-title">Ongoing exploration - love discovering new capabilities</div>
+                        <div class="option-desc">I continuously explore and experiment with tool capabilities</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question" id="question-8">
+                <div class="question-number">Question 8 of 8</div>
+                <h3>Your main educational objective is to:</h3>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q8" value="engaging">
+                        <div class="option-title">Create engaging, multimedia learning experiences</div>
+                        <div class="option-desc">Focus on captivating content that inspires and motivates learners</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="technical_skills">
+                        <div class="option-title">Develop students' technical and programming skills</div>
+                        <div class="option-desc">Build practical, job-ready technical competencies</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="real_world">
+                        <div class="option-title">Connect students with real-world projects</div>
+                        <div class="option-desc">Bridge the gap between education and professional practice</div>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="personalized">
+                        <div class="option-title">Provide personalized, adaptive learning support</div>
+                        <div class="option-desc">Customize education to meet individual learning needs</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="results" id="results">
+                <div class="result-card" id="result-content">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+                <button class="btn" onclick="restartQuiz()">Take Quiz Again</button>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+                <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="recommendation_engine.js"></script>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 8;
+        const answers = {};
+        const recommendationEngine = new ToolRecommendationEngine();
+
+        function updateProgress() {
+            const progress = ((currentQuestion - 1) / totalQuestions) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                document.getElementById(`question-${currentQuestion}`).classList.remove('active');
+                currentQuestion++;
+                document.getElementById(`question-${currentQuestion}`).classList.add('active');
+                updateProgress();
+                updateNavigation();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                document.getElementById(`question-${currentQuestion}`).classList.remove('active');
+                currentQuestion--;
+                document.getElementById(`question-${currentQuestion}`).classList.add('active');
+                updateProgress();
+                updateNavigation();
+            }
+        }
+
+        function updateNavigation() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            prevBtn.disabled = currentQuestion === 1;
+            
+            const currentAnswer = answers[`q${currentQuestion}`];
+            nextBtn.disabled = !currentAnswer;
+            
+            if (currentQuestion === totalQuestions) {
+                nextBtn.textContent = 'See My Toolkit';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+        }
+
+        function showResults() {
+            document.getElementById(`question-${currentQuestion}`).classList.remove('active');
+            document.querySelector('.navigation').style.display = 'none';
+            document.querySelector('.progress-bar').style.display = 'none';
+            
+            const results = recommendationEngine.calculateRecommendations(answers);
+            
+            const resultContent = document.getElementById('result-content');
+            resultContent.innerHTML = `
+                <h2 class="result-title">${results.userProfile.title}</h2>
+                <p class="result-description">${results.userProfile.description}</p>
+                
+                <div class="categories-summary">
+                    <h4>Your Top Teaching Focus Areas:</h4>
+                    <div class="category-list">
+                        ${results.topCategories.slice(0, 3).map(cat => `
+                            <span class="category-tag">${cat.label}</span>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="recommended-tools">
+                    <h3>Your Personalized Teaching Toolkit (${results.recommendations.length} Tools)</h3>
+                    <div class="tool-grid">
+                        ${results.recommendations.map(tool => `
+                            <div class="tool-item">
+                                <div class="tool-name">${tool.name}</div>
+                                <div class="tool-desc">${tool.description}</div>
+                                <div class="tool-category">${tool.category.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #f9fafb; border-radius: 8px; text-align: left;">
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 10px;">
+                        <strong>Next Steps:</strong>
+                    </p>
+                    <p style="color: #6b7280; font-size: 0.9rem;">
+                        • Visit the <a href="index.html" style="color: #4f46e5;">main tools page</a> to explore these recommendations<br>
+                        • Look for tools marked with your focus areas: ${results.topCategories.slice(0, 2).map(cat => cat.label).join(' and ')}<br>
+                        • Start with high-priority tools that match your technical comfort level
+                    </p>
+                </div>
+            `;
+            
+            document.getElementById('results').classList.add('active');
+        }
+
+        function restartQuiz() {
+            currentQuestion = 1;
+            Object.keys(answers).forEach(key => delete answers[key]);
+            
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            document.getElementById('question-1').classList.add('active');
+            document.getElementById('results').classList.remove('active');
+            
+            document.querySelector('.navigation').style.display = 'flex';
+            document.querySelector('.progress-bar').style.display = 'block';
+            
+            document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+            document.querySelectorAll('.option').forEach(option => option.classList.remove('selected'));
+            
+            updateProgress();
+            updateNavigation();
+        }
+
+        // Event listeners for radio buttons
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                answers[e.target.name] = e.target.value;
+                
+                // Update visual selection
+                const questionDiv = e.target.closest('.question');
+                questionDiv.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                e.target.closest('.option').classList.add('selected');
+                
+                updateNavigation();
+            }
+        });
+
+        // Initialize
+        updateProgress();
+        updateNavigation();
+    </script>
+</body>
+</html>
