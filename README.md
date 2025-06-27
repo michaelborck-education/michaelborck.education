@@ -2,6 +2,10 @@
 
 A comprehensive portal showcasing a diverse collection of educational tools, desktop applications, web platforms, and infrastructure resources designed for teaching, learning, and educational content creation.
 
+## 🎯 Interactive Tool Discovery
+
+**New!** Take our [Interactive Quiz](https://michael-borck.github.io/borck.education/educational-tools-quiz.html) to discover which tools best match your teaching style and needs. Answer 8 personalized questions to get curated recommendations from our collection of 35+ educational tools.
+
 ## About
 
 This portal serves as a centralized hub for educational technology tools that span multiple categories:
@@ -47,11 +51,13 @@ This portal serves as a centralized hub for educational technology tools that sp
 
 ## Features
 
-- **Search & Filter** - Find tools by name, description, or topic with real-time filtering
-- **Category Navigation** - Browse by application type (Desktop, Web, Python Package, etc.)
-- **Rich Metadata** - Each tool includes descriptions, GitHub links, documentation, and download options
-- **Responsive Design** - Mobile-friendly interface with modern styling
-- **Interactive Cards** - Hover effects and detailed information for each tool
+- **🎯 Interactive Quiz** - Personalized tool recommendations based on teaching style and preferences
+- **🔍 Search & Filter** - Find tools by name, description, or topic with real-time filtering
+- **📂 Category Navigation** - Browse by application type (Desktop, Web, Python Package, etc.)
+- **📊 Rich Metadata** - Each tool includes descriptions, GitHub links, documentation, and download options
+- **📱 Responsive Design** - Mobile-friendly interface with modern styling
+- **✨ Interactive Cards** - Hover effects and detailed information for each tool
+- **🤖 Smart Categorization** - AI-powered tool classification across 8 teaching contexts
 
 ## Technology Stack
 
@@ -59,22 +65,57 @@ This portal serves as a centralized hub for educational technology tools that sp
 - **Styling**: Tailwind CSS
 - **Icons**: Font Awesome
 - **Hosting**: GitHub Pages
+- **Quiz System**: Custom recommendation engine with 8-category tool mapping
+- **Content Generation**: [gh-toolkit](https://github.com/michael-borck/gh-toolkit) - Automated portfolio page generation
 - **Data**: Dynamic JSON-based tool catalog
 
 ## Project Stats
 
-- **50+ Educational Tools** across 6 categories
+- **35+ Educational Tools** across 8 teaching contexts
 - **Multiple Programming Languages**: Python, TypeScript, JavaScript, Rust, and more
 - **Cross-Platform Support**: Desktop apps for Windows, macOS, and Linux
 - **Open Source**: MIT licensed projects with full source code availability
+- **Smart Recommendations**: Personalized tool suggestions based on teaching preferences
 
 ## Getting Started
 
-Visit the live portal at [borck.education](https://michael-borck.github.io/borck.education/) to explore all available tools.
+1. **Take the Quiz**: Visit [borck.education](https://michael-borck.github.io/borck.education/) and click "Find My Perfect Toolkit" for personalized recommendations
+2. **Browse All Tools**: Explore the complete collection using search and category filters
+3. **Explore Individual Tools**: Click through to GitHub repositories, documentation, and downloads
+
+### For Developers & Maintainers
+
+The main index.html page is automatically generated using the [gh-toolkit](https://github.com/michael-borck/gh-toolkit) package:
+
+```bash
+# Install the toolkit
+pip install gh-toolkit
+
+# Generate updated portfolio page
+gh-toolkit generate --config your-config.json
+```
+
+This allows for automated updates to the tool collection as repositories are added or modified.
+
+## Quiz System
+
+The interactive tool recommendation system includes:
+
+- **8 personalized questions** covering teaching context, technical comfort, and educational goals
+- **Smart categorization** across Content Creation, Technical Education, Project Management, Assessment & Feedback, AI Tutoring, Student Interaction, Language Communication, and Utility Tools
+- **Auto-update functionality** that syncs recommendations when new tools are added
+- **Responsive design** that works seamlessly across all devices
+
+For detailed information about the quiz system, see [QUIZ_README.md](QUIZ_README.md).
 
 ## Contributing
 
 This is an educational showcase portal. Individual tools are maintained in their respective repositories. See each tool's GitHub page for contribution guidelines.
+
+To update the main tool collection:
+1. Use [gh-toolkit](https://github.com/michael-borck/gh-toolkit) to regenerate index.html
+2. Run `python3 update_quiz_tools.py` to sync the quiz recommendations
+3. Test with `python3 test_quiz.py` to ensure everything works correctly
 
 ## License
 
