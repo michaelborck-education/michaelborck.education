@@ -11,225 +11,320 @@ class ToolRecommendationEngine {
 
     initializeTools() {
         return {
-            // Content Creation Tools
-            'critique-quest': {
+            'deeptalk': {
+                name: 'Deep Talk',
+                category: 'language_communication',
+                description: 'Desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'charactercraftlite': {
+                name: 'Character Craft Lite',
+                category: 'language_communication',
+                description: 'Create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["self_directed"],
+                subjects: ["communication"]
+            },
+            'critiquequest': {
                 name: 'Critique Quest',
                 category: 'content_creation',
-                description: 'Generate AI-powered educational case studies with multiple AI model support',
+                description: 'Desktop application for generating ai-powered educational case studies with support for   openai, anthropic, google gemini, and local ollama models.',
                 priority: 'high',
-                techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['general', 'business']
+                techLevel: 'advanced',
+                contexts: ["general"],
+                subjects: ["general"]
             },
-            'curriculum-curator': {
+            'curriculumcurator': {
                 name: 'Curriculum Curator',
                 category: 'content_creation',
-                description: 'Design and manage educational curricula with structured frameworks',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university', 'k12'],
-                subjects: ['general']
-            },
-            'deep-brief': {
-                name: 'Deep Brief',
-                category: 'content_creation',
-                description: 'Analyze presentations with AI-powered feedback on speech and visuals',
+                description: '',
                 priority: 'high',
                 techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['general', 'communication']
+                contexts: ["general"],
+                subjects: ["general"]
             },
-            'slide-stream': {
-                name: 'Slide Stream',
-                category: 'content_creation',
-                description: 'Streaming presentation tool for interactive educational content',
-                priority: 'medium',
-                techLevel: 'beginner',
-                contexts: ['university', 'k12'],
-                subjects: ['general']
-            },
-            'docslanding': {
-                name: 'Docs Landing',
-                category: 'content_creation',
-                description: 'Create script-generated documentation and landing pages',
-                priority: 'low',
-                techLevel: 'advanced',
-                contexts: ['university'],
-                subjects: ['technology']
-            },
-
-            // Technical Education Tools
-            'python-jumpstart': {
-                name: 'Python Jumpstart',
-                category: 'technical_education',
-                description: 'Learn Python fundamentals for working with AI coding assistants',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university', 'self_directed'],
-                subjects: ['technology']
-            },
-            'hands-on-ai': {
-                name: 'Hands-on AI',
-                category: 'technical_education',
-                description: 'Build personality-driven AI bots for classroom use',
-                priority: 'high',
-                techLevel: 'intermediate',
-                contexts: ['university'],
-                subjects: ['technology']
-            },
-            'the-calculator-walkthrough': {
-                name: 'Calculator Walkthrough',
-                category: 'technical_education',
-                description: 'Programming practice through calculator implementation',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university', 'self_directed'],
-                subjects: ['technology']
-            },
-            'python-dev-book': {
-                name: 'Python Dev Book',
-                category: 'technical_education',
-                description: 'Comprehensive guide from zero to production Python development',
-                priority: 'medium',
-                techLevel: 'intermediate',
-                contexts: ['university', 'self_directed'],
-                subjects: ['technology']
-            },
-            'programming-paradigms': {
-                name: 'Programming Paradigms',
-                category: 'technical_education',
-                description: 'Educational resource covering different programming approaches',
-                priority: 'medium',
-                techLevel: 'intermediate',
-                contexts: ['university'],
-                subjects: ['technology']
-            },
-
-            // Assessment & Feedback Tools
-            'insight-lens': {
+            'insightlens': {
                 name: 'Insight Lens',
                 category: 'assessment_feedback',
-                description: 'Analyze survey data and visualize trends with AI insights',
+                description: 'Desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights. built with electron for windows, macos, and linux.',
                 priority: 'high',
-                techLevel: 'intermediate',
-                contexts: ['university'],
-                subjects: ['general']
+                techLevel: 'advanced',
+                contexts: ["university"],
+                subjects: ["general"]
             },
-            'feed-forward': {
-                name: 'Feed Forward',
-                category: 'assessment_feedback',
-                description: 'Transform feedback into actionable learning paths',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university', 'k12'],
-                subjects: ['general']
-            },
-            'deep-talk': {
-                name: 'Deep Talk',
-                category: 'assessment_feedback',
-                description: 'AI-powered transcription and analysis of audio/video content',
-                priority: 'medium',
-                techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['general', 'communication']
-            },
-
-            // Project Management Tools
-            'capstone-connect': {
-                name: 'Capstone Connect',
-                category: 'project_management',
-                description: 'Connect students with industry clients for real-world projects',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university'],
-                subjects: ['business', 'technology']
-            },
-            'venture-lab': {
-                name: 'Venture Lab',
-                category: 'project_management',
-                description: 'AI-powered tools for business innovation and entrepreneurship',
-                priority: 'high',
-                techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['business']
-            },
-            'sim-lab': {
-                name: 'Sim Lab',
-                category: 'project_management',
-                description: 'Simulate business scenarios for educational decision-making',
-                priority: 'medium',
-                techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['business']
-            },
-
-            // AI Tutoring Tools
-            'study-buddy': {
+            'studybuddy': {
                 name: 'Study Buddy',
                 category: 'ai_tutoring',
-                description: 'Offline AI tutoring without internet or account requirements',
+                description: 'Study buddy is a desktop application that provides ai tutoring without requiring internet access or accounts.',
                 priority: 'high',
                 techLevel: 'beginner',
-                contexts: ['university', 'k12', 'self_directed'],
-                subjects: ['general']
+                contexts: ["general"],
+                subjects: ["general"]
             },
-            'talk-buddy': {
-                name: 'Talk Buddy',
-                category: 'ai_tutoring',
-                description: 'Practice conversations and interview skills with AI',
-                priority: 'high',
-                techLevel: 'beginner',
-                contexts: ['university', 'corporate', 'self_directed'],
-                subjects: ['communication']
-            },
-            'character-craft-lite': {
-                name: 'Character Craft Lite',
-                category: 'ai_tutoring',
-                description: 'Create structured chatbot personalities for educational use',
+            'swipeverse': {
+                name: 'Swipe Verse',
+                category: 'content_creation',
+                description: 'Configure, play, transform - enter a universe of your making.',
                 priority: 'medium',
                 techLevel: 'intermediate',
-                contexts: ['university'],
-                subjects: ['technology']
+                contexts: ["general"],
+                subjects: ["general"]
             },
-
-            // Student Interaction Tools
-            'class-pulse': {
+            'talkbuddy': {
+                name: 'Talk Buddy',
+                category: 'language_communication',
+                description: 'Your ai talking partner. practice english conversations and ace interviews with real-time voice ai.',
+                priority: 'high',
+                techLevel: 'beginner',
+                contexts: ["general"],
+                subjects: ["communication"]
+            },
+            'venturelab': {
+                name: 'Venture Lab',
+                category: 'project_management',
+                description: 'Ai-powered tools for business innovation and entrepreneurship education.',
+                priority: 'high',
+                techLevel: 'intermediate',
+                contexts: ["corporate"],
+                subjects: ["business"]
+            },
+            'capstoneconnect': {
+                name: 'Capstone Connect',
+                category: 'project_management',
+                description: 'A web-based project management system that connects curtin university students with industry clients for capstone projects, featuring project browsing, interest tracking, and administrative oversight.',
+                priority: 'high',
+                techLevel: 'intermediate',
+                contexts: ["university"],
+                subjects: ["business"]
+            },
+            'classpulse': {
                 name: 'Class Pulse',
                 category: 'student_interaction',
-                description: 'Real-time polls, word clouds, and interactive audience engagement',
+                description: 'A real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales for audience engagement with instant visualised results.',
+                priority: 'high',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'cloudcore': {
+                name: 'Cloudcore',
+                category: 'assessment_feedback',
+                description: 'A github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis and design.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'deepbrief': {
+                name: 'Deep Brief',
+                category: 'assessment_feedback',
+                description: 'A video analysis application that helps students, educators, and professionals analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback. the app processes videos to provide actionable insights on speaking performance, visual effectiveness, and overall presentation quality.',
+                priority: 'high',
+                techLevel: 'advanced',
+                contexts: ["k12"],
+                subjects: ["communication"]
+            },
+            'docslanding': {
+                name: 'Docslanding',
+                category: 'content_creation',
+                description: 'Jekyll theme for script-generated landing pages + auto-docs.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'feedforward': {
+                name: 'Feed Forward',
+                category: 'assessment_feedback',
+                description: 'Feedforward: elevate your learning. transforming feedback into a path to success.',
                 priority: 'high',
                 techLevel: 'beginner',
-                contexts: ['university', 'k12', 'corporate'],
-                subjects: ['general']
+                contexts: ["general"],
+                subjects: ["general"]
             },
-            'lecturer-clone': {
+            'lecturerclone': {
                 name: 'Lecturer Clone',
                 category: 'student_interaction',
-                description: 'Clone and adapt lecturer presentation styles',
+                description: '',
                 priority: 'medium',
                 techLevel: 'intermediate',
-                contexts: ['university'],
-                subjects: ['general']
-            },
-
-            // Utility Tools (High-value additions)
-            'ask-docs': {
-                name: 'Ask Docs',
-                category: 'utility',
-                description: 'AI-powered document assistant for any documentation',
-                priority: 'medium',
-                techLevel: 'intermediate',
-                contexts: ['university', 'corporate'],
-                subjects: ['general', 'technology']
+                contexts: ["university"],
+                subjects: ["general"]
             },
             'slinkr': {
                 name: 'Slinkr',
                 category: 'utility',
-                description: 'URL toolkit for shortening, expanding, and QR code generation',
+                description: 'A lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links—all in one spot.',
                 priority: 'low',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'simlab': {
+                name: 'Sim Lab',
+                category: 'assessment_feedback',
+                description: 'A set of classes for simulating various business-related scenarios. it is designed for educational use, allowing students to experiment with modeling, analysis, and decision-making in different contexts.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["k12"],
+                subjects: ["business"]
+            },
+            'fetchmyweather': {
+                name: 'Fetch My Weather',
+                category: 'technical_education',
+                description: 'A beginner-friendly python package for fetching weather data from wttr.in with built-in caching and error handling.',
+                priority: 'medium',
                 techLevel: 'beginner',
-                contexts: ['general'],
-                subjects: ['general']
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'handsonai': {
+                name: 'Hands On Ai',
+                category: 'technical_education',
+                description: 'A lightweight python framework for building personality-driven ai bots in the classroom.',
+                priority: 'high',
+                techLevel: 'advanced',
+                contexts: ["k12"],
+                subjects: ["technology"]
+            },
+            'pythonjumpstart': {
+                name: 'Python Jumpstart',
+                category: 'ai_tutoring',
+                description: 'Learn just enough python to effectively work with ai coding assistants - a   beginner-friendly guide to coding fundamentals in the ai era.',
+                priority: 'high',
+                techLevel: 'beginner',
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'intentionalprompting': {
+                name: 'Intentional Prompting',
+                category: 'content_creation',
+                description: '',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'programmingparadigms': {
+                name: 'Programming Paradigms',
+                category: 'technical_education',
+                description: '',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'pythondevbook': {
+                name: 'Python Dev Book',
+                category: 'technical_education',
+                description: 'A comprehensive guide to python development practices from zero to production.',
+                priority: 'medium',
+                techLevel: 'beginner',
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'theabsoluteminimumyoumustknow': {
+                name: 'The Absolute Minimum You Must Know',
+                category: 'content_creation',
+                description: '',
+                priority: 'medium',
+                techLevel: 'beginner',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'thecalculatorwalkthrough': {
+                name: 'The Calculator Walkthrough',
+                category: 'technical_education',
+                description: 'An exercise in programming to help hone your skills through practice and repetition.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'electronkit': {
+                name: 'Electron Kit',
+                category: 'content_creation',
+                description: 'Professional electron app template with modular architecture.',
+                priority: 'medium',
+                techLevel: 'advanced',
+                contexts: ["corporate"],
+                subjects: ["general"]
+            },
+            'headlesscmsreact': {
+                name: 'Headless Cms React',
+                category: 'project_management',
+                description: 'A minimal react project scaffold that builds on headless cms concepts, enabling students to implement wordpress api integration using react hooks.',
+                priority: 'medium',
+                techLevel: 'advanced',
+                contexts: ["k12"],
+                subjects: ["general"]
+            },
+            'headlesscmsvanilla': {
+                name: 'Headless Cms Vanilla',
+                category: 'project_management',
+                description: 'A scaffolded html/css/javascript project based on the headless wordpress proof of concept, providing structure for students to implement a retail product display.',
+                priority: 'medium',
+                techLevel: 'advanced',
+                contexts: ["k12"],
+                subjects: ["general"]
+            },
+            'secutils': {
+                name: 'Sec Utils',
+                category: 'ai_tutoring',
+                description: 'Provide security utilities in docker containers.',
+                priority: 'medium',
+                techLevel: 'advanced',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'weatherwisetemplate': {
+                name: 'Weatherwise Template',
+                category: 'technical_education',
+                description: '🌦️ kickstart your weatherwise assignment with this ready-to-use python template featuring ai prompts, weather data, and cool visualisations! 🧠📊.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["technology"]
+            },
+            'askdocs': {
+                name: 'Ask Docs',
+                category: 'ai_tutoring',
+                description: 'A general-purpose document assistant for any documentation using rag and llms like openai, claude, gemini, groq, and ollama.',
+                priority: 'medium',
+                techLevel: 'advanced',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'ghtoolkit': {
+                name: 'Gh Toolkit',
+                category: 'utility',
+                description: 'Github repository portfolio management and presentation toolkit with llm-powered categorization and beautiful site generation.',
+                priority: 'low',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["business"]
+            },
+            'markmate': {
+                name: 'Mark Mate',
+                category: 'ai_tutoring',
+                description: 'Your ai teaching assistant for assignments and assessment.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
+            },
+            'slidestream': {
+                name: 'Slide Stream',
+                category: 'content_creation',
+                description: 'Instantly turn your text, slides, or markdown notes into engaging videos with the power of ai.',
+                priority: 'medium',
+                techLevel: 'intermediate',
+                contexts: ["general"],
+                subjects: ["general"]
             }
         };
     }

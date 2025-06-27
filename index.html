@@ -55,12 +55,20 @@
     <nav class="bg-gray-50 py-4 border-b">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap gap-2 justify-center">
-                <a href="educational-tools-quiz.html" class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition font-medium">🎯 Take Quiz</a>
                 <button onclick="filterByCategory('all')" class="category-btn px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition" data-category="all">All Projects</button>
                 <button onclick="filterByCategory('desktop-application')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="desktop-application">Desktop Application</button> <button onclick="filterByCategory('web-application')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="web-application">Web Application</button> <button onclick="filterByCategory('python-package')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="python-package">Python Package</button> <button onclick="filterByCategory('learning-resource')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="learning-resource">Learning Resource</button> <button onclick="filterByCategory('infrastructure-tool')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="infrastructure-tool">Infrastructure Tool</button> <button onclick="filterByCategory('command-line-tool')" class="category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition" data-category="command-line-tool">Command Line Tool</button>
             </div>
         </div>
-    </nav>
+    
+                <div class="mt-2 flex flex-wrap gap-2 justify-center border-t pt-2">
+                    <span class="text-sm text-gray-600 px-2 py-1">Filter by Role:</span>
+                    <button onclick="filterByRole('all')" class="role-btn px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-sm" data-role="all">All Roles</button>
+                    <button onclick="filterByRole('lecturer')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="lecturer">For Lecturers</button>
+                    <button onclick="filterByRole('student')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="student">For Students</button>
+                    <button onclick="filterByRole('researcher')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="researcher">For Researchers</button>
+                </div>
+            </div>
+        </nav>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
@@ -77,7 +85,7 @@
                      data-category="desktop-application"
                      data-name="deep-talk"
                      data-description="desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design"
-                     data-topics="ai-powered-transcription cross-platform desktop-app ffmpeg local-processing natural-language-processing privacy-first typescript audio-video-processing">
+                     data-topics="ai-powered-transcription cross-platform desktop-app ffmpeg local-processing natural-language-processing privacy-first typescript audio-video-processing" data-roles="lecturer researcher" data-primary-role="lecturer" data-role-confidence="lecturer:high researcher:high">
                     
                     
                     
@@ -123,7 +131,7 @@
                      data-category="desktop-application"
                      data-name="character-craft-lite"
                      data-description="create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai."
-                     data-topics="chatbot conversational-ai electron prompt-engineering rag-pipeline react tailwind-css typescript vite zustand">
+                     data-topics="chatbot conversational-ai electron prompt-engineering rag-pipeline react tailwind-css typescript vite zustand" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:high student:high">
                     
                     
                     
@@ -169,7 +177,7 @@
                      data-category="desktop-application"
                      data-name="critique-quest"
                      data-description="desktop application for generating ai-powered educational case studies with support for   openai, anthropic, google gemini, and local ollama models"
-                     data-topics="ai-generation case-studies cli-tool critical-thinking education electron google-gemini gpt-4 local-models machine-learning">
+                     data-topics="ai-generation case-studies cli-tool critical-thinking education electron google-gemini gpt-4 local-models machine-learning" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:high student:high">
                     
                     
                     
@@ -215,7 +223,7 @@
                      data-category="desktop-application"
                      data-name="curriculum-curator"
                      data-description=""
-                     data-topics="configuration eslint front-end react rust template typescript vite web-development">
+                     data-topics="configuration eslint front-end react rust template typescript vite web-development" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -261,7 +269,7 @@
                      data-category="desktop-application"
                      data-name="insight-lens"
                      data-description="desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights. built with electron for windows, macos, and linux."
-                     data-topics="ai-assistant charts cross-platform data-visualization desktop-app education electron lecturers pdf-processing react sqlite survey-analysis typescript university">
+                     data-topics="ai-assistant charts cross-platform data-visualization desktop-app education electron lecturers pdf-processing react sqlite survey-analysis typescript university" data-roles="lecturer researcher" data-primary-role="lecturer" data-role-confidence="lecturer:medium researcher:high">
                     
                     
                     
@@ -307,7 +315,7 @@
                      data-category="desktop-application"
                      data-name="study-buddy"
                      data-description="study buddy is a desktop application that provides ai tutoring without requiring internet access or accounts"
-                     data-topics="ai-tutor css desktop-application electron javascript local-inference privacy-focused typescript offline-application">
+                     data-topics="ai-tutor css desktop-application electron javascript local-inference privacy-focused typescript offline-application" data-roles="student" data-primary-role="student" data-role-confidence="student:high">
                     
                     
                     
@@ -353,7 +361,7 @@
                      data-category="desktop-application"
                      data-name="swipe-verse"
                      data-description="configure, play, transform - enter a universe of your making"
-                     data-topics="card-game cross-platform data-driven flet mobile-first multiverse python resource-management theme-based">
+                     data-topics="card-game cross-platform data-driven flet mobile-first multiverse python resource-management theme-based" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -399,7 +407,7 @@
                      data-category="desktop-application"
                      data-name="talk-buddy"
                      data-description="your ai talking partner. practice english conversations and ace interviews with real-time voice ai."
-                     data-topics="ai conversation-practice cross-platform electron english-learning interview-prep natural-language-processing speech-recognition text-to-speech typescript">
+                     data-topics="ai conversation-practice cross-platform electron english-learning interview-prep natural-language-processing speech-recognition text-to-speech typescript" data-roles="student" data-primary-role="student" data-role-confidence="student:high">
                     
                     
                     
@@ -445,7 +453,7 @@
                      data-category="desktop-application"
                      data-name="venture-lab"
                      data-description="ai-powered tools for business innovation and entrepreneurship education"
-                     data-topics="ai business-innovation desktop-application education entrepreneurship html javascript market-research rust pitch-presentation">
+                     data-topics="ai business-innovation desktop-application education entrepreneurship html javascript market-research rust pitch-presentation" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -501,7 +509,7 @@
                      data-category="web-application"
                      data-name="capstone-connect"
                      data-description="a web-based project management system that connects curtin university students with industry clients for capstone projects, featuring project browsing, interest tracking, and administrative oversight"
-                     data-topics="capstone-projects industry-collaboration input-validation javascript jwt-authentication project-management security sqlite student-portal web-application">
+                     data-topics="capstone-projects industry-collaboration input-validation javascript jwt-authentication project-management security sqlite student-portal web-application" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:high">
                     
                     
                     
@@ -547,7 +555,7 @@
                      data-category="web-application"
                      data-name="class-pulse"
                      data-description="a real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales for audience engagement with instant visualised results"
-                     data-topics="audience-engagement data-visualization flask html interactive-presentation python qr-code real-time user-management">
+                     data-topics="audience-engagement data-visualization flask html interactive-presentation python qr-code real-time user-management" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:high student:high">
                     
                     
                     
@@ -593,7 +601,7 @@
                      data-category="web-application"
                      data-name="cloudcore"
                      data-description="a github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis and design."
-                     data-topics="css cybersecurity educational-platform javascript lua quarto static-site-generator systems-analysis web-design">
+                     data-topics="css cybersecurity educational-platform javascript lua quarto static-site-generator systems-analysis web-design" data-roles="lecturer researcher" data-primary-role="lecturer" data-role-confidence="lecturer:high researcher:low">
                     
                     
                     
@@ -639,7 +647,7 @@
                      data-category="web-application"
                      data-name="deep-brief"
                      data-description="a video analysis application that helps students, educators, and professionals analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback. the app processes videos to provide actionable insights on speaking performance, visual effectiveness, and overall presentation quality."
-                     data-topics="ai-feedback cli-tool computer-vision python speech-recognition video-analysis web-application presentation-analysis">
+                     data-topics="ai-feedback cli-tool computer-vision python speech-recognition video-analysis web-application presentation-analysis" data-roles="lecturer student researcher" data-primary-role="lecturer" data-role-confidence="lecturer:high student:low researcher:medium">
                     
                     
                     
@@ -685,7 +693,7 @@
                      data-category="web-application"
                      data-name="docslanding"
                      data-description="jekyll theme for script-generated landing pages + auto-docs"
-                     data-topics="dark-mode documentation github-pages jekyll landing-page responsive-design script-generation seo tailwind-css">
+                     data-topics="dark-mode documentation github-pages jekyll landing-page responsive-design script-generation seo tailwind-css" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -731,7 +739,7 @@
                      data-category="web-application"
                      data-name="feed-forward"
                      data-description="feedforward: elevate your learning. transforming feedback into a path to success"
-                     data-topics="ai education fastapi feedback git python shell sqlite tailwindcss web-app">
+                     data-topics="ai education fastapi feedback git python shell sqlite tailwindcss web-app" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:medium student:high">
                     
                     
                     
@@ -777,7 +785,7 @@
                      data-category="web-application"
                      data-name="lecturer-clone"
                      data-description=""
-                     data-topics="ai education-technology fastapi media-production python react text-to-video video-generation voice-cloning">
+                     data-topics="ai education-technology fastapi media-production python react text-to-video video-generation voice-cloning" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -823,7 +831,7 @@
                      data-category="web-application"
                      data-name="slinkr"
                      data-description="a lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links—all in one spot."
-                     data-topics="css flask flask-bcrypt flask-login html python qr-code-generator tinydb url-expansion url-shortener">
+                     data-topics="css flask flask-bcrypt flask-login html python qr-code-generator tinydb url-expansion url-shortener" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -879,7 +887,7 @@
                      data-category="python-package"
                      data-name="sim-lab"
                      data-description="a set of classes for simulating various business-related scenarios. it is designed for educational use, allowing students to experiment with modeling, analysis, and decision-making in different contexts."
-                     data-topics="agent-based-simulation business-simulation data-visualization discrete-event-simulation educational-tools modeling python simulation stochastic-processes system-dynamics">
+                     data-topics="agent-based-simulation business-simulation data-visualization discrete-event-simulation educational-tools modeling python simulation stochastic-processes system-dynamics" data-roles="lecturer researcher" data-primary-role="lecturer" data-role-confidence="lecturer:high researcher:medium">
                     
                     
                     
@@ -925,7 +933,7 @@
                      data-category="python-package"
                      data-name="fetch-my-weather"
                      data-description="a beginner-friendly python package for fetching weather data from wttr.in with built-in caching and error handling."
-                     data-topics="api beginner-friendly caching cli-tool educational json mini-projects pydantic python weather">
+                     data-topics="api beginner-friendly caching cli-tool educational json mini-projects pydantic python weather" data-roles="student researcher" data-primary-role="student" data-role-confidence="student:high researcher:high">
                     
                     
                     
@@ -971,7 +979,7 @@
                      data-category="python-package"
                      data-name="hands-on-ai"
                      data-description="a lightweight python framework for building personality-driven ai bots in the classroom."
-                     data-topics="ai-education chatbots cli-tool natural-language-processing python react-framework retrieval-augmented-generation educational-toolkit">
+                     data-topics="ai-education chatbots cli-tool natural-language-processing python react-framework retrieval-augmented-generation educational-toolkit" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:high student:high">
                     
                     
                     
@@ -1027,7 +1035,7 @@
                      data-category="learning-resource"
                      data-name="python-jumpstart"
                      data-description="learn just enough python to effectively work with ai coding assistants - a   beginner-friendly guide to coding fundamentals in the ai era"
-                     data-topics="ai beginner-friendly control-flow data-structures exception-handling functions python testing text-manipulation coding-fundamentals">
+                     data-topics="ai beginner-friendly control-flow data-structures exception-handling functions python testing text-manipulation coding-fundamentals" data-roles="student" data-primary-role="student" data-role-confidence="student:high">
                     
                     
                     
@@ -1073,7 +1081,7 @@
                      data-category="learning-resource"
                      data-name="intentional-prompting"
                      data-description=""
-                     data-topics="ai css human-ai-interaction markdown programming-techniques quarto software-development tex">
+                     data-topics="ai css human-ai-interaction markdown programming-techniques quarto software-development tex" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1119,7 +1127,7 @@
                      data-category="learning-resource"
                      data-name="programming-paradigms"
                      data-description=""
-                     data-topics="calculator cli-tool functional-programming imperative-programming object-oriented-programming programming-paradigms python">
+                     data-topics="calculator cli-tool functional-programming imperative-programming object-oriented-programming programming-paradigms python" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1165,7 +1173,7 @@
                      data-category="learning-resource"
                      data-name="python-dev-book"
                      data-description="a comprehensive guide to python development practices from zero to production."
-                     data-topics="continuous-integration dependency-management documentation github-pages packaging python software-development static-analysis testing tex">
+                     data-topics="continuous-integration dependency-management documentation github-pages packaging python software-development static-analysis testing tex" data-roles="lecturer student" data-primary-role="lecturer" data-role-confidence="lecturer:medium student:high">
                     
                     
                     
@@ -1211,7 +1219,7 @@
                      data-category="learning-resource"
                      data-name="the-absolute-minimum-you-must-know"
                      data-description=""
-                     data-topics="cli-tool documentation git markdown programming-basics python self-directed-learning programming-career">
+                     data-topics="cli-tool documentation git markdown programming-basics python self-directed-learning programming-career" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1257,7 +1265,7 @@
                      data-category="learning-resource"
                      data-name="the-calculator-walkthrough"
                      data-description="an exercise in programming to help hone your skills through practice and repetition."
-                     data-topics="best-practices code-kata jupyter-notebook programming-practice python">
+                     data-topics="best-practices code-kata jupyter-notebook programming-practice python" data-roles="student" data-primary-role="student" data-role-confidence="student:high">
                     
                     
                     
@@ -1313,7 +1321,7 @@
                      data-category="infrastructure-tool"
                      data-name="electron-kit"
                      data-description="professional electron app template with modular architecture"
-                     data-topics="data-visualization electron electron-builder notifications react sqlite tailwind-css typescript vector-search vite">
+                     data-topics="data-visualization electron electron-builder notifications react sqlite tailwind-css typescript vector-search vite" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1359,7 +1367,7 @@
                      data-category="infrastructure-tool"
                      data-name="headless-cms-react"
                      data-description="a minimal react project scaffold that builds on headless cms concepts, enabling students to implement wordpress api integration using react hooks."
-                     data-topics="api-integration blog-application content-management headless-cms javascript react react-hooks react-router web-development wordpress-api">
+                     data-topics="api-integration blog-application content-management headless-cms javascript react react-hooks react-router web-development wordpress-api" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1405,7 +1413,7 @@
                      data-category="infrastructure-tool"
                      data-name="headless-cms-vanilla"
                      data-description="a scaffolded html/css/javascript project based on the headless wordpress proof of concept, providing structure for students to implement a retail product display."
-                     data-topics="content-management css frontend-development headless-cms html product-display rest-api vanilla-javascript web-development wordpress-api">
+                     data-topics="content-management css frontend-development headless-cms html product-display rest-api vanilla-javascript web-development wordpress-api" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1451,7 +1459,7 @@
                      data-category="infrastructure-tool"
                      data-name="sec-utils"
                      data-description="provide security utilities in docker containers"
-                     data-topics="cli-tool docker docker-compose haproxy network-security security-utilities wireshark">
+                     data-topics="cli-tool docker docker-compose haproxy network-security security-utilities wireshark" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1497,7 +1505,7 @@
                      data-category="infrastructure-tool"
                      data-name="weatherwise-template"
                      data-description="🌦️ kickstart your weatherwise assignment with this ready-to-use python template featuring ai prompts, weather data, and cool visualisations! 🧠📊"
-                     data-topics="ai data-visualization jupyter-notebook python starter-kit template weather">
+                     data-topics="ai data-visualization jupyter-notebook python starter-kit template weather" data-roles="researcher" data-primary-role="researcher" data-role-confidence="researcher:high">
                     
                     
                     
@@ -1553,7 +1561,7 @@
                      data-category="command-line-tool"
                      data-name="ask-docs"
                      data-description="a general-purpose document assistant for any documentation using rag and llms like openai, claude, gemini, groq, and ollama."
-                     data-topics="cli-tool document-assistant llm openai python rag semantic-search text-ui web-app">
+                     data-topics="cli-tool document-assistant llm openai python rag semantic-search text-ui web-app" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1599,7 +1607,7 @@
                      data-category="command-line-tool"
                      data-name="gh-toolkit"
                      data-description="github repository portfolio management and presentation toolkit with llm-powered categorization and beautiful site generation"
-                     data-topics="categorization cli-tool github llm portfolio-management python repository-management shell repository-health-checking topic-tagging">
+                     data-topics="categorization cli-tool github llm portfolio-management python repository-management shell repository-health-checking topic-tagging" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:high">
                     
                     
                     
@@ -1645,7 +1653,7 @@
                      data-category="command-line-tool"
                      data-name="mark-mate"
                      data-description="your ai teaching assistant for assignments and assessment."
-                     data-topics="ai assessment assignments cli-tool github grading litellm machine-learning python wordpress">
+                     data-topics="ai assessment assignments cli-tool github grading litellm machine-learning python wordpress" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:high">
                     
                     
                     
@@ -1691,7 +1699,7 @@
                      data-category="command-line-tool"
                      data-name="slide-stream"
                      data-description="instantly turn your text, slides, or markdown notes into engaging videos with the power of ai"
-                     data-topics="ai cli-tool markdown-to-video natural-language-processing python text-to-speech video-creation image-sourcing powerpoint-to-video presentation-automation">
+                     data-topics="ai cli-tool markdown-to-video natural-language-processing python text-to-speech video-creation image-sourcing powerpoint-to-video presentation-automation" data-roles="lecturer" data-primary-role="lecturer" data-role-confidence="lecturer:low">
                     
                     
                     
@@ -1854,6 +1862,108 @@
                 }
             });
         });
+
+        
+        // Role filtering functionality
+        let currentRole = 'all';
+        
+        function filterByRole(role) {
+            currentRole = role;
+            
+            // Update button styles
+            document.querySelectorAll('.role-btn').forEach(btn => {
+                if (btn.dataset.role === role) {
+                    btn.className = 'role-btn px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-sm';
+                } else {
+                    btn.className = 'role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm';
+                }
+            });
+            
+            // Filter cards
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const searchTerms = searchInput.value.toLowerCase()
+                    .split(' ')
+                    .filter(term => term.length > 0);
+                
+                const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                // Check if card matches role filter
+                let matchesRole = true;
+                if (role !== 'all' && card.dataset.roles) {
+                    const cardRoles = card.dataset.roles.split(' ');
+                    matchesRole = cardRoles.includes(role);
+                }
+                
+                if (matchesCategory && matchesSearch && matchesRole) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Smooth scroll to results
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Update existing filterByCategory to respect role filters
+        const originalFilterByCategory = filterByCategory;
+        filterByCategory = function(category) {
+            currentCategory = category;
+            
+            // Update button styles
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition';
+                } else {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition';
+                }
+            });
+            
+            // Filter cards (including role filter)
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const searchTerms = searchInput.value.toLowerCase()
+                    .split(' ')
+                    .filter(term => term.length > 0);
+                
+                const matchesCategory = category === 'all' || card.dataset.category === category;
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                // Check role filter
+                let matchesRole = true;
+                if (currentRole !== 'all' && card.dataset.roles) {
+                    const cardRoles = card.dataset.roles.split(' ');
+                    matchesRole = cardRoles.includes(currentRole);
+                }
+                
+                if (matchesCategory && matchesSearch && matchesRole) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Smooth scroll to results
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
     </script>
 </body>
 </html>

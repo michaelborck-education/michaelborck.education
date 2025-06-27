@@ -79,6 +79,25 @@ class QuizToolUpdater:
             'communication': ['communication', 'language', 'speech', 'conversation', 'presentation'],
             'general': ['general', 'multi', 'broad', 'diverse', 'various']
         }
+        
+        # Role-based classification rules
+        self.role_indicators = {
+            'lecturer': [
+                'teaching', 'instructor', 'classroom', 'curriculum', 'assessment', 'grading', 
+                'presentation', 'lecture', 'course', 'educational', 'pedagogy', 'feedback',
+                'management', 'analysis', 'evaluation', 'design', 'create', 'develop'
+            ],
+            'student': [
+                'learning', 'study', 'practice', 'tutorial', 'buddy', 'guide', 'beginner',
+                'jumpstart', 'learn', 'self-directed', 'training', 'skill', 'exercise',
+                'interactive', 'help', 'support', 'personal'
+            ],
+            'researcher': [
+                'analysis', 'data', 'research', 'survey', 'insight', 'analytics', 'modeling',
+                'simulation', 'processing', 'investigation', 'exploration', 'discovery',
+                'evaluation', 'measurement', 'statistical', 'scientific'
+            ]
+        }
 
     def extract_tools_from_html(self) -> List[Dict[str, Any]]:
         """Extract all tools from the HTML file"""
@@ -153,6 +172,49 @@ class QuizToolUpdater:
         
         return tools
 
+    def classify_role(self, tool: Dict[str, Any]) -> Dict[str, Any]:
+        """Classify tool by target user roles with confidence scoring"""
+        text_to_analyze = f"{tool['description']} {tool['topics']}"
+        role_scores = {}
+        
+        for role, keywords in self.role_indicators.items():
+            score = 0
+            for keyword in keywords:
+                if keyword in text_to_analyze:
+                    score += 1
+            role_scores[role] = score
+        
+        # Determine primary roles (with confidence levels)
+        max_score = max(role_scores.values()) if role_scores.values() else 0
+        roles = []
+        
+        for role, score in role_scores.items():
+            if score > 0:
+                # Calculate confidence: high (75%+), medium (50%+), low (<50%)
+                confidence_ratio = score / max_score if max_score > 0 else 0
+                if confidence_ratio >= 0.75:
+                    confidence = 'high'
+                elif confidence_ratio >= 0.5:
+                    confidence = 'medium'
+                else:
+                    confidence = 'low'
+                
+                roles.append({'role': role, 'confidence': confidence, 'score': score})
+        
+        # Default fallback - if no clear role indicators, assign based on category
+        if not roles:
+            if tool['original_category'] in ['desktop-application', 'infrastructure-tool']:
+                roles.append({'role': 'lecturer', 'confidence': 'low', 'score': 0})
+            elif 'python-package' in tool['original_category'] or 'learning' in text_to_analyze:
+                roles.append({'role': 'student', 'confidence': 'low', 'score': 0})
+            else:
+                roles.append({'role': 'lecturer', 'confidence': 'low', 'score': 0})
+        
+        return {
+            'roles': roles,
+            'primary_role': roles[0]['role'] if roles else 'lecturer'
+        }
+
     def categorize_tool(self, tool: Dict[str, Any]) -> Dict[str, Any]:
         """Categorize a tool based on its name and description"""
         name_lower = tool['name'].lower()
@@ -203,6 +265,9 @@ class QuizToolUpdater:
         elif teaching_category in ['utility', 'infrastructure']:
             priority = 'low'
         
+        # Classify by user roles
+        role_classification = self.classify_role(tool)
+        
         return {
             'name': tool['name'].replace('-', ' ').title().replace(' ', ''),
             'display_name': tool['name'].replace('-', ' ').title(),
@@ -212,7 +277,9 @@ class QuizToolUpdater:
             'techLevel': tech_level,
             'contexts': contexts,
             'subjects': subjects,
-            'original_category': tool['original_category']
+            'original_category': tool['original_category'],
+            'roles': role_classification['roles'],
+            'primary_role': role_classification['primary_role']
         }
 
     def _clean_description(self, description: str) -> str:
@@ -279,11 +346,203 @@ class QuizToolUpdater:
         with open(self.js_file, 'w', encoding='utf-8') as f:
             f.write(updated_content)
 
+    def update_html_file(self, tools: List[Dict[str, Any]]) -> None:
+        """Update HTML file with role data attributes and remove redundant quiz button"""
+        if not self.html_file.exists():
+            raise FileNotFoundError(f"HTML file not found: {self.html_file}")
+        
+        with open(self.html_file, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+        
+        # Remove redundant "Take Quiz" button from navigation
+        html_content = self._remove_redundant_quiz_button(html_content)
+        
+        # Add role filter buttons
+        html_content = self._add_role_filter_buttons(html_content)
+        
+        # Add role data attributes to tool cards
+        html_content = self._add_role_attributes(html_content, tools)
+        
+        # Add JavaScript for role filtering
+        html_content = self._add_role_filtering_javascript(html_content)
+        
+        with open(self.html_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+    def _remove_redundant_quiz_button(self, html_content: str) -> str:
+        """Remove the redundant Take Quiz button from navigation filters"""
+        # Pattern to match the quiz button in navigation
+        pattern = r'<a href="educational-tools-quiz\.html" class="[^"]*">🎯 Take Quiz</a>\s*'
+        updated_content = re.sub(pattern, '', html_content)
+        return updated_content
+
+    def _add_role_filter_buttons(self, html_content: str) -> str:
+        """Add role-based filter buttons to navigation"""
+        # Find the navigation section and add role buttons
+        role_buttons = '''
+                <div class="mt-2 flex flex-wrap gap-2 justify-center border-t pt-2">
+                    <span class="text-sm text-gray-600 px-2 py-1">Filter by Role:</span>
+                    <button onclick="filterByRole('all')" class="role-btn px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-sm" data-role="all">All Roles</button>
+                    <button onclick="filterByRole('lecturer')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="lecturer">For Lecturers</button>
+                    <button onclick="filterByRole('student')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="student">For Students</button>
+                    <button onclick="filterByRole('researcher')" class="role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm" data-role="researcher">For Researchers</button>
+                </div>'''
+        
+        # Insert role buttons after the category navigation
+        pattern = r'(</nav>)'
+        replacement = f'{role_buttons}\n            </div>\n        \\1'
+        updated_content = re.sub(pattern, replacement, html_content)
+        return updated_content
+
+    def _add_role_attributes(self, html_content: str, tools: List[Dict[str, Any]]) -> str:
+        """Add role data attributes to tool cards"""
+        # Create a mapping of tool names to their role data
+        tool_roles = {}
+        for tool in tools:
+            tool_name = tool['name'].replace(' ', '').lower().replace('-', '')
+            original_name = tool['display_name'].lower().replace(' ', '-')
+            
+            # Create role strings for data attributes
+            role_list = [role['role'] for role in tool['roles']]
+            confidence_list = [f"{role['role']}:{role['confidence']}" for role in tool['roles']]
+            
+            tool_roles[original_name] = {
+                'roles': ' '.join(role_list),
+                'primary_role': tool['primary_role'],
+                'role_confidence': ' '.join(confidence_list)
+            }
+        
+        # Add role attributes to each tool card
+        for tool_name, role_data in tool_roles.items():
+            # Pattern to find the specific tool card
+            pattern = rf'(<div[^>]*class="[^"]*repo-card[^"]*"[^>]*data-name="{re.escape(tool_name)}"[^>]*)(>)'
+            
+            # Add role data attributes
+            role_attrs = f' data-roles="{role_data["roles"]}" data-primary-role="{role_data["primary_role"]}" data-role-confidence="{role_data["role_confidence"]}"'
+            replacement = f'\\1{role_attrs}\\2'
+            
+            html_content = re.sub(pattern, replacement, html_content)
+        
+        return html_content
+
+    def _add_role_filtering_javascript(self, html_content: str) -> str:
+        """Add JavaScript function for role-based filtering"""
+        role_filter_js = '''
+        
+        // Role filtering functionality
+        let currentRole = 'all';
+        
+        function filterByRole(role) {
+            currentRole = role;
+            
+            // Update button styles
+            document.querySelectorAll('.role-btn').forEach(btn => {
+                if (btn.dataset.role === role) {
+                    btn.className = 'role-btn px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-sm';
+                } else {
+                    btn.className = 'role-btn px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition text-sm';
+                }
+            });
+            
+            // Filter cards
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const searchTerms = searchInput.value.toLowerCase()
+                    .split(' ')
+                    .filter(term => term.length > 0);
+                
+                const matchesCategory = currentCategory === 'all' || card.dataset.category === currentCategory;
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                // Check if card matches role filter
+                let matchesRole = true;
+                if (role !== 'all' && card.dataset.roles) {
+                    const cardRoles = card.dataset.roles.split(' ');
+                    matchesRole = cardRoles.includes(role);
+                }
+                
+                if (matchesCategory && matchesSearch && matchesRole) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Smooth scroll to results
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Update existing filterByCategory to respect role filters
+        const originalFilterByCategory = filterByCategory;
+        filterByCategory = function(category) {
+            currentCategory = category;
+            
+            // Update button styles
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition';
+                } else {
+                    btn.className = 'category-btn px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition';
+                }
+            });
+            
+            // Filter cards (including role filter)
+            let visibleCount = 0;
+            
+            allCards.forEach(card => {
+                const searchableText = 
+                    card.dataset.name + ' ' + 
+                    card.dataset.description + ' ' + 
+                    card.dataset.topics;
+                
+                const searchTerms = searchInput.value.toLowerCase()
+                    .split(' ')
+                    .filter(term => term.length > 0);
+                
+                const matchesCategory = category === 'all' || card.dataset.category === category;
+                const matchesSearch = searchTerms.length === 0 || 
+                    searchTerms.every(term => searchableText.includes(term));
+                
+                // Check role filter
+                let matchesRole = true;
+                if (currentRole !== 'all' && card.dataset.roles) {
+                    const cardRoles = card.dataset.roles.split(' ');
+                    matchesRole = cardRoles.includes(currentRole);
+                }
+                
+                if (matchesCategory && matchesSearch && matchesRole) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Smooth scroll to results
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };'''
+        
+        # Insert the role filtering JavaScript before the closing script tag
+        pattern = r'(    </script>\s*</body>)'
+        replacement = f'{role_filter_js}\n\\1'
+        updated_content = re.sub(pattern, replacement, html_content)
+        return updated_content
+
     def generate_report(self, tools: List[Dict[str, Any]]) -> str:
         """Generate a summary report of the tools analysis"""
         category_counts = {}
         tech_level_counts = {}
         priority_counts = {}
+        role_counts = {}
+        primary_role_counts = {}
         
         for tool in tools:
             # Count categories
@@ -297,6 +556,15 @@ class QuizToolUpdater:
             # Count priorities
             pri = tool['priority']
             priority_counts[pri] = priority_counts.get(pri, 0) + 1
+            
+            # Count primary roles
+            primary_role = tool['primary_role']
+            primary_role_counts[primary_role] = primary_role_counts.get(primary_role, 0) + 1
+            
+            # Count all roles (including multi-role tools)
+            for role_info in tool['roles']:
+                role = role_info['role']
+                role_counts[role] = role_counts.get(role, 0) + 1
         
         report = f"""
 === QUIZ TOOL UPDATE REPORT ===
@@ -305,6 +573,12 @@ Updated: {len(tools)} tools
 CATEGORY DISTRIBUTION:
 {chr(10).join(f"  {cat.replace('_', ' ').title()}: {count} tools" for cat, count in sorted(category_counts.items()))}
 
+ROLE DISTRIBUTION (Primary):
+{chr(10).join(f"  {role.title()}: {count} tools" for role, count in sorted(primary_role_counts.items()))}
+
+ROLE DISTRIBUTION (All Assignments):
+{chr(10).join(f"  {role.title()}: {count} tools" for role, count in sorted(role_counts.items()))}
+
 TECHNICAL LEVEL DISTRIBUTION:
 {chr(10).join(f"  {level.title()}: {count} tools" for level, count in sorted(tech_level_counts.items()))}
 
@@ -312,12 +586,13 @@ PRIORITY DISTRIBUTION:
 {chr(10).join(f"  {pri.title()}: {count} tools" for pri, count in sorted(priority_counts.items()))}
 
 HIGH PRIORITY TOOLS:
-{chr(10).join(f"  - {tool['display_name']}" for tool in tools if tool['priority'] == 'high')}
+{chr(10).join(f"  - {tool['display_name']} (Primary: {tool['primary_role']})" for tool in tools if tool['priority'] == 'high')}
 
 FILES UPDATED:
   - {self.js_file}
+  - {self.html_file} (role attributes and navigation)
 
-The quiz recommendation engine has been updated with the latest tools from {self.html_file}.
+The quiz recommendation engine and HTML have been updated with role-based filtering from {self.html_file}.
         """
         
         return report.strip()
@@ -348,7 +623,12 @@ The quiz recommendation engine has been updated with the latest tools from {self
             # Update JavaScript file
             print(f"\\nUpdating {self.js_file}...")
             self.update_js_file(categorized_tools)
-            print("✅ Quiz tools updated successfully!")
+            
+            # Update HTML file with role data and remove redundant button
+            print(f"\\nUpdating {self.html_file}...")
+            self.update_html_file(categorized_tools)
+            
+            print("✅ Quiz tools and HTML updated successfully!")
         else:
             print("\\n🔍 DRY RUN - No files were modified")
             
