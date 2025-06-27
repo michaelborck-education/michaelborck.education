@@ -1,0 +1,527 @@
+[
+  {
+    "name": "DeepTalk",
+    "display_name": "Deep Talk",
+    "category": "language_communication",
+    "description": "Desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "CharacterCraftLite",
+    "display_name": "Character Craft Lite",
+    "category": "language_communication",
+    "description": "Create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "self_directed"
+    ],
+    "subjects": [
+      "communication"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "CritiqueQuest",
+    "display_name": "Critique Quest",
+    "category": "content_creation",
+    "description": "Desktop application for generating ai-powered educational case studies with support for   openai, anthropic, google gemini, and local ollama models.",
+    "priority": "high",
+    "techLevel": "advanced",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "CurriculumCurator",
+    "display_name": "Curriculum Curator",
+    "category": "content_creation",
+    "description": "",
+    "priority": "high",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "InsightLens",
+    "display_name": "Insight Lens",
+    "category": "assessment_feedback",
+    "description": "Desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights. built with electron for windows, macos, and linux.",
+    "priority": "high",
+    "techLevel": "advanced",
+    "contexts": [
+      "university"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "StudyBuddy",
+    "display_name": "Study Buddy",
+    "category": "ai_tutoring",
+    "description": "Study buddy is a desktop application that provides ai tutoring without requiring internet access or accounts.",
+    "priority": "high",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "SwipeVerse",
+    "display_name": "Swipe Verse",
+    "category": "content_creation",
+    "description": "Configure, play, transform - enter a universe of your making.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "TalkBuddy",
+    "display_name": "Talk Buddy",
+    "category": "language_communication",
+    "description": "Your ai talking partner. practice english conversations and ace interviews with real-time voice ai.",
+    "priority": "high",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "communication"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "VentureLab",
+    "display_name": "Venture Lab",
+    "category": "project_management",
+    "description": "Ai-powered tools for business innovation and entrepreneurship education.",
+    "priority": "high",
+    "techLevel": "intermediate",
+    "contexts": [
+      "corporate"
+    ],
+    "subjects": [
+      "business"
+    ],
+    "original_category": "desktop-application"
+  },
+  {
+    "name": "CapstoneConnect",
+    "display_name": "Capstone Connect",
+    "category": "project_management",
+    "description": "A web-based project management system that connects curtin university students with industry clients for capstone projects, featuring project browsing, interest tracking, and administrative oversight.",
+    "priority": "high",
+    "techLevel": "intermediate",
+    "contexts": [
+      "university"
+    ],
+    "subjects": [
+      "business"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "ClassPulse",
+    "display_name": "Class Pulse",
+    "category": "student_interaction",
+    "description": "A real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales for audience engagement with instant visualised results.",
+    "priority": "high",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "Cloudcore",
+    "display_name": "Cloudcore",
+    "category": "assessment_feedback",
+    "description": "A github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis and design.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "DeepBrief",
+    "display_name": "Deep Brief",
+    "category": "assessment_feedback",
+    "description": "A video analysis application that helps students, educators, and professionals analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback. the app processes videos to provide actionable insights on speaking performance, visual effectiveness, and overall presentation quality.",
+    "priority": "high",
+    "techLevel": "advanced",
+    "contexts": [
+      "k12"
+    ],
+    "subjects": [
+      "communication"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "Docslanding",
+    "display_name": "Docslanding",
+    "category": "content_creation",
+    "description": "Jekyll theme for script-generated landing pages + auto-docs.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "FeedForward",
+    "display_name": "Feed Forward",
+    "category": "assessment_feedback",
+    "description": "Feedforward: elevate your learning. transforming feedback into a path to success.",
+    "priority": "high",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "LecturerClone",
+    "display_name": "Lecturer Clone",
+    "category": "student_interaction",
+    "description": "",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "university"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "Slinkr",
+    "display_name": "Slinkr",
+    "category": "utility",
+    "description": "A lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links\u2014all in one spot.",
+    "priority": "low",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "web-application"
+  },
+  {
+    "name": "SimLab",
+    "display_name": "Sim Lab",
+    "category": "assessment_feedback",
+    "description": "A set of classes for simulating various business-related scenarios. it is designed for educational use, allowing students to experiment with modeling, analysis, and decision-making in different contexts.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "k12"
+    ],
+    "subjects": [
+      "business"
+    ],
+    "original_category": "python-package"
+  },
+  {
+    "name": "FetchMyWeather",
+    "display_name": "Fetch My Weather",
+    "category": "technical_education",
+    "description": "A beginner-friendly python package for fetching weather data from wttr.in with built-in caching and error handling.",
+    "priority": "medium",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "python-package"
+  },
+  {
+    "name": "HandsOnAi",
+    "display_name": "Hands On Ai",
+    "category": "technical_education",
+    "description": "A lightweight python framework for building personality-driven ai bots in the classroom.",
+    "priority": "high",
+    "techLevel": "advanced",
+    "contexts": [
+      "k12"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "python-package"
+  },
+  {
+    "name": "PythonJumpstart",
+    "display_name": "Python Jumpstart",
+    "category": "ai_tutoring",
+    "description": "Learn just enough python to effectively work with ai coding assistants - a   beginner-friendly guide to coding fundamentals in the ai era.",
+    "priority": "high",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "IntentionalPrompting",
+    "display_name": "Intentional Prompting",
+    "category": "content_creation",
+    "description": "",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "ProgrammingParadigms",
+    "display_name": "Programming Paradigms",
+    "category": "technical_education",
+    "description": "",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "PythonDevBook",
+    "display_name": "Python Dev Book",
+    "category": "technical_education",
+    "description": "A comprehensive guide to python development practices from zero to production.",
+    "priority": "medium",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "TheAbsoluteMinimumYouMustKnow",
+    "display_name": "The Absolute Minimum You Must Know",
+    "category": "content_creation",
+    "description": "",
+    "priority": "medium",
+    "techLevel": "beginner",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "TheCalculatorWalkthrough",
+    "display_name": "The Calculator Walkthrough",
+    "category": "technical_education",
+    "description": "An exercise in programming to help hone your skills through practice and repetition.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "learning-resource"
+  },
+  {
+    "name": "ElectronKit",
+    "display_name": "Electron Kit",
+    "category": "content_creation",
+    "description": "Professional electron app template with modular architecture.",
+    "priority": "medium",
+    "techLevel": "advanced",
+    "contexts": [
+      "corporate"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "infrastructure-tool"
+  },
+  {
+    "name": "HeadlessCmsReact",
+    "display_name": "Headless Cms React",
+    "category": "project_management",
+    "description": "A minimal react project scaffold that builds on headless cms concepts, enabling students to implement wordpress api integration using react hooks.",
+    "priority": "medium",
+    "techLevel": "advanced",
+    "contexts": [
+      "k12"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "infrastructure-tool"
+  },
+  {
+    "name": "HeadlessCmsVanilla",
+    "display_name": "Headless Cms Vanilla",
+    "category": "project_management",
+    "description": "A scaffolded html/css/javascript project based on the headless wordpress proof of concept, providing structure for students to implement a retail product display.",
+    "priority": "medium",
+    "techLevel": "advanced",
+    "contexts": [
+      "k12"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "infrastructure-tool"
+  },
+  {
+    "name": "SecUtils",
+    "display_name": "Sec Utils",
+    "category": "ai_tutoring",
+    "description": "Provide security utilities in docker containers.",
+    "priority": "medium",
+    "techLevel": "advanced",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "infrastructure-tool"
+  },
+  {
+    "name": "WeatherwiseTemplate",
+    "display_name": "Weatherwise Template",
+    "category": "technical_education",
+    "description": "\ud83c\udf26\ufe0f kickstart your weatherwise assignment with this ready-to-use python template featuring ai prompts, weather data, and cool visualisations! \ud83e\udde0\ud83d\udcca.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "technology"
+    ],
+    "original_category": "infrastructure-tool"
+  },
+  {
+    "name": "AskDocs",
+    "display_name": "Ask Docs",
+    "category": "ai_tutoring",
+    "description": "A general-purpose document assistant for any documentation using rag and llms like openai, claude, gemini, groq, and ollama.",
+    "priority": "medium",
+    "techLevel": "advanced",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "command-line-tool"
+  },
+  {
+    "name": "GhToolkit",
+    "display_name": "Gh Toolkit",
+    "category": "utility",
+    "description": "Github repository portfolio management and presentation toolkit with llm-powered categorization and beautiful site generation.",
+    "priority": "low",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "business"
+    ],
+    "original_category": "command-line-tool"
+  },
+  {
+    "name": "MarkMate",
+    "display_name": "Mark Mate",
+    "category": "ai_tutoring",
+    "description": "Your ai teaching assistant for assignments and assessment.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "command-line-tool"
+  },
+  {
+    "name": "SlideStream",
+    "display_name": "Slide Stream",
+    "category": "content_creation",
+    "description": "Instantly turn your text, slides, or markdown notes into engaging videos with the power of ai.",
+    "priority": "medium",
+    "techLevel": "intermediate",
+    "contexts": [
+      "general"
+    ],
+    "subjects": [
+      "general"
+    ],
+    "original_category": "command-line-tool"
+  }
+]

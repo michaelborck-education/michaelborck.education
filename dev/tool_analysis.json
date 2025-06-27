@@ -1,0 +1,43 @@
+{
+  "all_tools": [],
+  "teaching_categories": {
+    "content_creation": {
+      "description": "Tools for creating educational content, presentations, and materials",
+      "tools": []
+    },
+    "student_interaction": {
+      "description": "Tools for engaging with students and interactive learning",
+      "tools": []
+    },
+    "assessment_feedback": {
+      "description": "Tools for assessment, grading, and providing feedback",
+      "tools": []
+    },
+    "language_communication": {
+      "description": "Tools for language learning and communication skills",
+      "tools": []
+    },
+    "data_analysis": {
+      "description": "Tools for analyzing student data and educational insights",
+      "tools": []
+    },
+    "technical_development": {
+      "description": "Tools for programming, development, and technical education",
+      "tools": []
+    },
+    "project_management": {
+      "description": "Tools for managing educational projects and resources",
+      "tools": []
+    },
+    "infrastructure_setup": {
+      "description": "Technical infrastructure and setup tools (mainly for educators)",
+      "tools": []
+    }
+  },
+  "complexity_levels": {
+    "beginner": [],
+    "intermediate": [],
+    "advanced": []
+  },
+  "total_count": 0
+}

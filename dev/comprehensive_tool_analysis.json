@@ -1,0 +1,641 @@
+{
+  "all_tools": [
+    {
+      "name": "deep-talk",
+      "category": "desktop-application",
+      "description": "desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design"
+    },
+    {
+      "name": "character-craft-lite",
+      "category": "desktop-application",
+      "description": "create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai"
+    },
+    {
+      "name": "critique-quest",
+      "category": "desktop-application",
+      "description": "desktop application for generating ai-powered educational case studies with support for openai, anthropic, google gemini, and local ollama models"
+    },
+    {
+      "name": "curriculum-curator",
+      "category": "desktop-application",
+      "description": "curriculum design and management tool"
+    },
+    {
+      "name": "insight-lens",
+      "category": "desktop-application",
+      "description": "desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights"
+    },
+    {
+      "name": "study-buddy",
+      "category": "desktop-application",
+      "description": "desktop application that provides ai tutoring without requiring internet access or accounts"
+    },
+    {
+      "name": "swipe-verse",
+      "category": "desktop-application",
+      "description": "configure, play, transform - enter a universe of your making"
+    },
+    {
+      "name": "talk-buddy",
+      "category": "desktop-application",
+      "description": "your ai talking partner. practice english conversations and ace interviews with real-time voice ai"
+    },
+    {
+      "name": "venture-lab",
+      "category": "desktop-application",
+      "description": "ai-powered tools for business innovation and entrepreneurship education"
+    },
+    {
+      "name": "capstone-connect",
+      "category": "web-application",
+      "description": "web-based project management system that connects curtin university students with industry clients for capstone projects"
+    },
+    {
+      "name": "class-pulse",
+      "category": "web-application",
+      "description": "real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales"
+    },
+    {
+      "name": "cloudcore",
+      "category": "web-application",
+      "description": "github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis"
+    },
+    {
+      "name": "deep-brief",
+      "category": "web-application",
+      "description": "video analysis application that helps analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback"
+    },
+    {
+      "name": "docslanding",
+      "category": "web-application",
+      "description": "jekyll theme for script-generated landing pages + auto-docs"
+    },
+    {
+      "name": "feed-forward",
+      "category": "web-application",
+      "description": "feedforward: elevate your learning. transforming feedback into a path to success"
+    },
+    {
+      "name": "lecturer-clone",
+      "category": "web-application",
+      "description": "educational tool for cloning lecturer presentation styles"
+    },
+    {
+      "name": "slide-stream",
+      "category": "web-application",
+      "description": "streaming presentation tool for education"
+    },
+    {
+      "name": "slinkr",
+      "category": "web-application",
+      "description": "lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links"
+    },
+    {
+      "name": "sim-lab",
+      "category": "python-package",
+      "description": "set of classes for simulating various business-related scenarios for educational use"
+    },
+    {
+      "name": "fetch-my-weather",
+      "category": "python-package",
+      "description": "beginner-friendly python package for fetching weather data with built-in caching and error handling"
+    },
+    {
+      "name": "hands-on-ai",
+      "category": "python-package",
+      "description": "lightweight python framework for building personality-driven ai bots in the classroom"
+    },
+    {
+      "name": "python-jumpstart",
+      "category": "learning-resource",
+      "description": "learn just enough python to effectively work with ai coding assistants - beginner-friendly guide"
+    },
+    {
+      "name": "intentional-prompting",
+      "category": "learning-resource",
+      "description": "learning resource for effective ai prompting techniques"
+    },
+    {
+      "name": "programming-paradigms",
+      "category": "learning-resource",
+      "description": "educational resource on programming paradigms"
+    },
+    {
+      "name": "python-dev-book",
+      "category": "learning-resource",
+      "description": "comprehensive guide to python development practices from zero to production"
+    },
+    {
+      "name": "the-absolute-minimum-you-must-know",
+      "category": "learning-resource",
+      "description": "essential knowledge guide for beginners"
+    },
+    {
+      "name": "the-calculator-walkthrough",
+      "category": "learning-resource",
+      "description": "exercise in programming to help hone skills through practice and repetition"
+    },
+    {
+      "name": "electron-kit",
+      "category": "infrastructure-tool",
+      "description": "professional electron app template with modular architecture"
+    },
+    {
+      "name": "headless-cms-react",
+      "category": "infrastructure-tool",
+      "description": "minimal react project scaffold that builds on headless cms concepts for wordpress api integration"
+    },
+    {
+      "name": "headless-cms-vanilla",
+      "category": "infrastructure-tool",
+      "description": "scaffolded html/css/javascript project for headless wordpress implementation"
+    },
+    {
+      "name": "sec-utils",
+      "category": "infrastructure-tool",
+      "description": "security utilities in docker containers"
+    },
+    {
+      "name": "weatherwise-template",
+      "category": "infrastructure-tool",
+      "description": "kickstart weatherwise assignment with ready-to-use python template featuring ai prompts and weather data"
+    },
+    {
+      "name": "ask-docs",
+      "category": "command-line-tool",
+      "description": "general-purpose document assistant for any documentation using rag and llms"
+    },
+    {
+      "name": "gh-toolkit",
+      "category": "command-line-tool",
+      "description": "github toolkit for command line operations"
+    },
+    {
+      "name": "mark-mate",
+      "category": "command-line-tool",
+      "description": "command line tool for markdown processing"
+    }
+  ],
+  "teaching_categories": {
+    "content_creation": {
+      "description": "Tools for creating educational content, presentations, and materials",
+      "tools": [
+        {
+          "name": "critique-quest",
+          "category": "desktop-application",
+          "description": "desktop application for generating ai-powered educational case studies with support for openai, anthropic, google gemini, and local ollama models"
+        },
+        {
+          "name": "curriculum-curator",
+          "category": "desktop-application",
+          "description": "curriculum design and management tool"
+        },
+        {
+          "name": "swipe-verse",
+          "category": "desktop-application",
+          "description": "configure, play, transform - enter a universe of your making"
+        },
+        {
+          "name": "deep-brief",
+          "category": "web-application",
+          "description": "video analysis application that helps analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback"
+        },
+        {
+          "name": "docslanding",
+          "category": "web-application",
+          "description": "jekyll theme for script-generated landing pages + auto-docs"
+        },
+        {
+          "name": "slide-stream",
+          "category": "web-application",
+          "description": "streaming presentation tool for education"
+        },
+        {
+          "name": "the-absolute-minimum-you-must-know",
+          "category": "learning-resource",
+          "description": "essential knowledge guide for beginners"
+        },
+        {
+          "name": "ask-docs",
+          "category": "command-line-tool",
+          "description": "general-purpose document assistant for any documentation using rag and llms"
+        },
+        {
+          "name": "mark-mate",
+          "category": "command-line-tool",
+          "description": "command line tool for markdown processing"
+        }
+      ],
+      "use_cases": [
+        "Creating course content",
+        "Designing presentations",
+        "Building case studies",
+        "Documentation"
+      ]
+    },
+    "student_interaction": {
+      "description": "Tools for engaging with students and interactive learning",
+      "tools": [
+        {
+          "name": "class-pulse",
+          "category": "web-application",
+          "description": "real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales"
+        },
+        {
+          "name": "lecturer-clone",
+          "category": "web-application",
+          "description": "educational tool for cloning lecturer presentation styles"
+        }
+      ],
+      "use_cases": [
+        "Live polling",
+        "Interactive sessions",
+        "Student engagement",
+        "Real-time feedback"
+      ]
+    },
+    "assessment_feedback": {
+      "description": "Tools for assessment, grading, and providing feedback",
+      "tools": [
+        {
+          "name": "deep-talk",
+          "category": "desktop-application",
+          "description": "desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design"
+        },
+        {
+          "name": "insight-lens",
+          "category": "desktop-application",
+          "description": "desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights"
+        },
+        {
+          "name": "cloudcore",
+          "category": "web-application",
+          "description": "github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis"
+        },
+        {
+          "name": "feed-forward",
+          "category": "web-application",
+          "description": "feedforward: elevate your learning. transforming feedback into a path to success"
+        }
+      ],
+      "use_cases": [
+        "Analyzing student work",
+        "Providing feedback",
+        "Survey analysis",
+        "Performance insights"
+      ]
+    },
+    "language_communication": {
+      "description": "Tools for language learning and communication skills",
+      "tools": [
+        {
+          "name": "character-craft-lite",
+          "category": "desktop-application",
+          "description": "create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai"
+        },
+        {
+          "name": "talk-buddy",
+          "category": "desktop-application",
+          "description": "your ai talking partner. practice english conversations and ace interviews with real-time voice ai"
+        }
+      ],
+      "use_cases": [
+        "Conversation practice",
+        "Language learning",
+        "Interview preparation",
+        "Audio transcription"
+      ]
+    },
+    "technical_education": {
+      "description": "Tools for programming, development, and technical education",
+      "tools": [
+        {
+          "name": "fetch-my-weather",
+          "category": "python-package",
+          "description": "beginner-friendly python package for fetching weather data with built-in caching and error handling"
+        },
+        {
+          "name": "hands-on-ai",
+          "category": "python-package",
+          "description": "lightweight python framework for building personality-driven ai bots in the classroom"
+        },
+        {
+          "name": "python-jumpstart",
+          "category": "learning-resource",
+          "description": "learn just enough python to effectively work with ai coding assistants - beginner-friendly guide"
+        },
+        {
+          "name": "programming-paradigms",
+          "category": "learning-resource",
+          "description": "educational resource on programming paradigms"
+        },
+        {
+          "name": "python-dev-book",
+          "category": "learning-resource",
+          "description": "comprehensive guide to python development practices from zero to production"
+        },
+        {
+          "name": "the-calculator-walkthrough",
+          "category": "learning-resource",
+          "description": "exercise in programming to help hone skills through practice and repetition"
+        },
+        {
+          "name": "weatherwise-template",
+          "category": "infrastructure-tool",
+          "description": "kickstart weatherwise assignment with ready-to-use python template featuring ai prompts and weather data"
+        }
+      ],
+      "use_cases": [
+        "Learning programming",
+        "Coding practice",
+        "Technical tutorials",
+        "Development skills"
+      ]
+    },
+    "project_management": {
+      "description": "Tools for managing educational projects and connecting with industry",
+      "tools": [
+        {
+          "name": "venture-lab",
+          "category": "desktop-application",
+          "description": "ai-powered tools for business innovation and entrepreneurship education"
+        },
+        {
+          "name": "capstone-connect",
+          "category": "web-application",
+          "description": "web-based project management system that connects curtin university students with industry clients for capstone projects"
+        },
+        {
+          "name": "sim-lab",
+          "category": "python-package",
+          "description": "set of classes for simulating various business-related scenarios for educational use"
+        },
+        {
+          "name": "headless-cms-react",
+          "category": "infrastructure-tool",
+          "description": "minimal react project scaffold that builds on headless cms concepts for wordpress api integration"
+        },
+        {
+          "name": "headless-cms-vanilla",
+          "category": "infrastructure-tool",
+          "description": "scaffolded html/css/javascript project for headless wordpress implementation"
+        }
+      ],
+      "use_cases": [
+        "Capstone projects",
+        "Industry connections",
+        "Project coordination",
+        "Business education"
+      ]
+    },
+    "ai_tutoring": {
+      "description": "AI-powered tutoring and personalized learning assistance",
+      "tools": [
+        {
+          "name": "study-buddy",
+          "category": "desktop-application",
+          "description": "desktop application that provides ai tutoring without requiring internet access or accounts"
+        },
+        {
+          "name": "intentional-prompting",
+          "category": "learning-resource",
+          "description": "learning resource for effective ai prompting techniques"
+        },
+        {
+          "name": "sec-utils",
+          "category": "infrastructure-tool",
+          "description": "security utilities in docker containers"
+        }
+      ],
+      "use_cases": [
+        "Personalized tutoring",
+        "AI assistance",
+        "Custom learning paths",
+        "Offline learning"
+      ]
+    },
+    "infrastructure": {
+      "description": "Technical infrastructure and development tools (mainly for educators)",
+      "tools": [
+        {
+          "name": "slinkr",
+          "category": "web-application",
+          "description": "lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links"
+        },
+        {
+          "name": "electron-kit",
+          "category": "infrastructure-tool",
+          "description": "professional electron app template with modular architecture"
+        },
+        {
+          "name": "gh-toolkit",
+          "category": "command-line-tool",
+          "description": "github toolkit for command line operations"
+        }
+      ],
+      "use_cases": [
+        "Setting up environments",
+        "Template creation",
+        "Development scaffolding",
+        "Technical setup"
+      ]
+    }
+  },
+  "user_groups": {
+    "k12_teachers": [],
+    "university_educators": [
+      {
+        "name": "insight-lens",
+        "category": "desktop-application",
+        "description": "desktop survey analysis tool for university lecturers. import pdf reports, visualise trends, and get ai-powered insights"
+      },
+      {
+        "name": "capstone-connect",
+        "category": "web-application",
+        "description": "web-based project management system that connects curtin university students with industry clients for capstone projects"
+      },
+      {
+        "name": "lecturer-clone",
+        "category": "web-application",
+        "description": "educational tool for cloning lecturer presentation styles"
+      }
+    ],
+    "students": [
+      {
+        "name": "study-buddy",
+        "category": "desktop-application",
+        "description": "desktop application that provides ai tutoring without requiring internet access or accounts"
+      },
+      {
+        "name": "feed-forward",
+        "category": "web-application",
+        "description": "feedforward: elevate your learning. transforming feedback into a path to success"
+      },
+      {
+        "name": "intentional-prompting",
+        "category": "learning-resource",
+        "description": "learning resource for effective ai prompting techniques"
+      },
+      {
+        "name": "the-absolute-minimum-you-must-know",
+        "category": "learning-resource",
+        "description": "essential knowledge guide for beginners"
+      }
+    ],
+    "technical_educators": [
+      {
+        "name": "fetch-my-weather",
+        "category": "python-package",
+        "description": "beginner-friendly python package for fetching weather data with built-in caching and error handling"
+      },
+      {
+        "name": "hands-on-ai",
+        "category": "python-package",
+        "description": "lightweight python framework for building personality-driven ai bots in the classroom"
+      },
+      {
+        "name": "python-jumpstart",
+        "category": "learning-resource",
+        "description": "learn just enough python to effectively work with ai coding assistants - beginner-friendly guide"
+      },
+      {
+        "name": "programming-paradigms",
+        "category": "learning-resource",
+        "description": "educational resource on programming paradigms"
+      },
+      {
+        "name": "python-dev-book",
+        "category": "learning-resource",
+        "description": "comprehensive guide to python development practices from zero to production"
+      },
+      {
+        "name": "the-calculator-walkthrough",
+        "category": "learning-resource",
+        "description": "exercise in programming to help hone skills through practice and repetition"
+      },
+      {
+        "name": "weatherwise-template",
+        "category": "infrastructure-tool",
+        "description": "kickstart weatherwise assignment with ready-to-use python template featuring ai prompts and weather data"
+      }
+    ],
+    "general_educators": [
+      {
+        "name": "deep-talk",
+        "category": "desktop-application",
+        "description": "desktop app for ai-powered transcription and analysis of audio/video files with local processing and privacy-first design"
+      },
+      {
+        "name": "character-craft-lite",
+        "category": "desktop-application",
+        "description": "create structured chatbot personalities for zero-shot prompts, rag pipelines, and conversational ai"
+      },
+      {
+        "name": "critique-quest",
+        "category": "desktop-application",
+        "description": "desktop application for generating ai-powered educational case studies with support for openai, anthropic, google gemini, and local ollama models"
+      },
+      {
+        "name": "curriculum-curator",
+        "category": "desktop-application",
+        "description": "curriculum design and management tool"
+      },
+      {
+        "name": "swipe-verse",
+        "category": "desktop-application",
+        "description": "configure, play, transform - enter a universe of your making"
+      },
+      {
+        "name": "talk-buddy",
+        "category": "desktop-application",
+        "description": "your ai talking partner. practice english conversations and ace interviews with real-time voice ai"
+      },
+      {
+        "name": "venture-lab",
+        "category": "desktop-application",
+        "description": "ai-powered tools for business innovation and entrepreneurship education"
+      },
+      {
+        "name": "class-pulse",
+        "category": "web-application",
+        "description": "real-time audience interaction tool that allows presenters to create interactive polls, word clouds, and rating scales"
+      },
+      {
+        "name": "cloudcore",
+        "category": "web-application",
+        "description": "github repository for a fictional company's website, serving as an educational platform in security, web design, and systems analysis"
+      },
+      {
+        "name": "deep-brief",
+        "category": "web-application",
+        "description": "video analysis application that helps analyze presentations by combining speech transcription, visual analysis, and ai-powered feedback"
+      },
+      {
+        "name": "docslanding",
+        "category": "web-application",
+        "description": "jekyll theme for script-generated landing pages + auto-docs"
+      },
+      {
+        "name": "slide-stream",
+        "category": "web-application",
+        "description": "streaming presentation tool for education"
+      },
+      {
+        "name": "slinkr",
+        "category": "web-application",
+        "description": "lightweight url toolkit that lets you shorten, expand, qr-ify, and validate links"
+      },
+      {
+        "name": "sim-lab",
+        "category": "python-package",
+        "description": "set of classes for simulating various business-related scenarios for educational use"
+      },
+      {
+        "name": "electron-kit",
+        "category": "infrastructure-tool",
+        "description": "professional electron app template with modular architecture"
+      },
+      {
+        "name": "headless-cms-react",
+        "category": "infrastructure-tool",
+        "description": "minimal react project scaffold that builds on headless cms concepts for wordpress api integration"
+      },
+      {
+        "name": "headless-cms-vanilla",
+        "category": "infrastructure-tool",
+        "description": "scaffolded html/css/javascript project for headless wordpress implementation"
+      },
+      {
+        "name": "sec-utils",
+        "category": "infrastructure-tool",
+        "description": "security utilities in docker containers"
+      },
+      {
+        "name": "ask-docs",
+        "category": "command-line-tool",
+        "description": "general-purpose document assistant for any documentation using rag and llms"
+      },
+      {
+        "name": "gh-toolkit",
+        "category": "command-line-tool",
+        "description": "github toolkit for command line operations"
+      },
+      {
+        "name": "mark-mate",
+        "category": "command-line-tool",
+        "description": "command line tool for markdown processing"
+      }
+    ]
+  },
+  "total_count": 35,
+  "category_distribution": {
+    "content_creation": 9,
+    "student_interaction": 2,
+    "assessment_feedback": 4,
+    "language_communication": 2,
+    "technical_education": 7,
+    "project_management": 5,
+    "ai_tutoring": 3,
+    "infrastructure": 3
+  }
+}
