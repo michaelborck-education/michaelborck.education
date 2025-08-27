@@ -238,19 +238,36 @@
             gap: 0.5rem;
             flex-wrap: wrap;
             margin-top: 0.5rem;
+            align-items: flex-start;
         }
         
-        .format-badge {
-            padding: 0.25rem 0.75rem;
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            text-decoration: none;
+        .format-badge,
+        a.format-badge,
+        a.format-badge:link,
+        a.format-badge:visited {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0.25rem 0.75rem !important;
+            background: var(--primary) !important;
+            color: var(--white) !important;
+            border-radius: 20px !important;
+            font-size: 0.8rem !important;
+            text-decoration: none !important;
             transition: background 0.3s ease;
+            line-height: 1 !important;
+            height: 1.6rem !important;
+            box-sizing: border-box !important;
+            white-space: nowrap !important;
+            border: none !important;
+            margin: 0 !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            vertical-align: top !important;
         }
         
-        .format-badge:hover {
+        .format-badge:hover,
+        a.format-badge:hover {
             background: var(--secondary);
         }
         
@@ -353,7 +370,7 @@
                         <span style="font-size: 0.7rem; font-weight: 600; margin-top: 0.25rem;">REASSURE</span>
                     </div>
                     <p style="font-size: 0.75rem; color: #718096; margin: 0 0 0.5rem 0; line-height: 1.3;">Address concerns honestly</p>
-                    <a href="faq.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Read FAQ →</a>
+                    <a href="ai_education_faq.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Read FAQ →</a>
                 </div>
                 
                 <!-- Journey Item 3 -->
@@ -363,7 +380,7 @@
                         <span style="font-size: 0.7rem; font-weight: 600; margin-top: 0.25rem;">ENABLE</span>
                     </div>
                     <p style="font-size: 0.75rem; color: #718096; margin: 0 0 0.5rem 0; line-height: 1.3;">Start with basic techniques</p>
-                    <a href="prompts.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Learn Prompting →</a>
+                    <a href="prompt_engineering_guide.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Learn Prompting →</a>
                 </div>
                 
                 <!-- Journey Item 4 -->
@@ -373,7 +390,7 @@
                         <span style="font-size: 0.7rem; font-weight: 600; margin-top: 0.25rem;">ADVANCE</span>
                     </div>
                     <p style="font-size: 0.75rem; color: #718096; margin: 0 0 0.5rem 0; line-height: 1.3;">Master advanced workflows</p>
-                    <a href="workflows.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Explore Workflows →</a>
+                    <a href="agentic_workflow_handout.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Explore Workflows →</a>
                 </div>
                 
                 <!-- Journey Item 5 -->
@@ -383,7 +400,7 @@
                         <span style="font-size: 0.7rem; font-weight: 600; margin-top: 0.25rem;">PERSPECTIVE</span>
                     </div>
                     <p style="font-size: 0.75rem; color: #718096; margin: 0 0 0.5rem 0; line-height: 1.3;">Understand the landscape</p>
-                    <a href="agi.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Reality Check →</a>
+                    <a href="agi_reality_check_handout.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.75rem;">Reality Check →</a>
                 </div>
             </div>
         </section>
@@ -403,29 +420,31 @@
                     <div class="meta">20 min presentation</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
-                        <span class="format-badge">PPTX</span>
-                        <span class="format-badge">Podcast</span>
+                        <a href="downloads/presentation.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/presentation.pptx" class="format-badge">PPTX</a>
+                        <a href="downloads/presentation.m4a" class="format-badge">Podcast</a>
                     </div>
                 </a>
                 
-                <a href="faq.html" class="resource-link">
+                <a href="ai_education_faq.html" class="resource-link">
                     <div class="title">FAQ</div>
                     <div class="description">Your concerns honestly addressed</div>
                     <div class="meta">10 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/ai_education_faq.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/ai_education_faq.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
                 
-                <a href="partner.html" class="resource-link">
+                <a href="ai_collaborative_partner_handout.html" class="resource-link">
                     <div class="title">AI as Partner</div>
                     <div class="description">Enhancement not replacement</div>
                     <div class="meta">15 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/ai_collaborative_partner_handout.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/ai_collaborative_partner_handout.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
             </section>
@@ -434,34 +453,36 @@
             <section class="resource-section">
                 <h3>Build Skills</h3>
                 
-                <a href="prompts.html" class="resource-link">
+                <a href="prompt_engineering_guide.html" class="resource-link">
                     <div class="title">Prompt Engineering</div>
                     <div class="description">From basic to brilliant</div>
                     <div class="meta">20 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
-                        <span class="format-badge">DOCX</span>
+                        <a href="downloads/prompt_engineering_guide.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/prompt_engineering_guide.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
                 
-                <a href="workflows.html" class="resource-link">
+                <a href="agentic_workflow_handout.html" class="resource-link">
                     <div class="title">Agentic Workflows</div>
                     <div class="description">Advanced AI orchestration</div>
                     <div class="meta">25 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/agentic_workflow_handout.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/agentic_workflow_handout.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
                 
-                <a href="copilot.html" class="resource-link">
+                <a href="ms_copilot_agent_handout.html" class="resource-link">
                     <div class="title">MS Copilot Guide</div>
                     <div class="description">Your safe, approved tool</div>
                     <div class="meta">15 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/ms_copilot_agent_handout.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/ms_copilot_agent_handout.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
             </section>
@@ -470,23 +491,25 @@
             <section class="resource-section">
                 <h3>Perspective</h3>
                 
-                <a href="agi.html" class="resource-link">
+                <a href="agi_reality_check_handout.html" class="resource-link">
                     <div class="title">AGI Reality Check</div>
                     <div class="description">Separating hype from reality</div>
                     <div class="meta">15 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/agi_reality_check_handout.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/agi_reality_check_handout.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
                 
-                <a href="breakthroughs.html" class="resource-link">
+                <a href="ai_breakthroughs_2025_handout.html" class="resource-link">
                     <div class="title">Breakthroughs Ahead</div>
                     <div class="description">What's coming in 2025-2027</div>
                     <div class="meta">20 min read</div>
                     <div class="download-formats">
                         <span class="format-badge">HTML</span>
-                        <span class="format-badge">PDF</span>
+                        <a href="downloads/ai_breakthroughs_2025_handout.pdf" class="format-badge">PDF</a>
+                        <a href="downloads/ai_breakthroughs_2025_handout.docx" class="format-badge">DOCX</a>
                     </div>
                 </a>
             </section>
@@ -497,15 +520,15 @@
             <h3>⚡ Quick Wins for Tomorrow's Class</h3>
             <div class="quick-wins-list">
                 <div class="quick-win-item">
-                    <a href="prompts.html#error-hunt">5-minute AI error hunt</a>
+                    <a href="prompt_engineering_guide.html#error-hunt">5-minute AI error hunt</a>
                     <p>Students identify AI mistakes</p>
                 </div>
                 <div class="quick-win-item">
-                    <a href="workflows.html#worksheet">Interactive worksheet converter</a>
+                    <a href="agentic_workflow_handout.html#worksheet">Interactive worksheet converter</a>
                     <p>Transform PDFs to HTML</p>
                 </div>
                 <div class="quick-win-item">
-                    <a href="copilot.html#discussion">Generate discussion questions</a>
+                    <a href="ms_copilot_agent_handout.html#discussion">Generate discussion questions</a>
                     <p>Bloom's taxonomy aligned</p>
                 </div>
             </div>

@@ -1,0 +1,151 @@
+---
+title: "From Gaps to Gains"
+subtitle: "Rethinking AI in Education"
+author: "Michael – AI Facilitator"
+date: "2025"
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    transition: slide
+    transition-speed: fast
+    slide-number: true
+    preview-links: auto
+    footer: "AI in Education – 20 mins + Q&A"
+---
+
+## Title Slide {.center}
+
+**From Gaps to Gains**  
+*Rethinking AI in Education*  
+
+👨‍🏫 Michael – AI Facilitator  
+Curtin University, 2025  
+
+👉 Companion resources: [michaelborck.education/ai](https://michaelborck.education/ai)  
+
+---
+
+## Today's Journey {background-color="#f7fafc"}
+
+- **From Gaps to Gains** — setting the scene  
+- **Talk Buddy** — student practice with feedback  
+- **Insight Lens** — turning surveys into action  
+- **Quick Win** — FAQ → interactive quiz  
+- **Beyond Today** — other tools in the toolkit  
+- **Shaping Support** — AI Facilitator poll  
+- **Closing Reflection** — where do we go from here?  
+
+---
+
+## From Gaps to Gains  
+
+**Narration Script:**  
+"These two diagrams tell two very different stories. On the left, we see students starting with gaps in their knowledge. That’s normal — every learner begins here. With AI, those gaps can be bridged, sometimes patched quickly so they can keep moving. Useful, but the gaps remain.  
+
+On the right, we see the better story — gaps aren’t just patched, they’re filled in, turned into lasting gains. This is where we want to take our students.  
+
+So the question is: which story do we want to write in our classrooms?"  
+
+---
+
+## Talk Buddy — Conversation Practice {background-color="#f0f9ff"}
+
+**Narration Script:**  
+"Our first demo is Talk Buddy. This tool helps students practice conversations that are hard to simulate in a classroom — breaking bad news, running a job interview, or eliciting client requirements.  
+
+Students practice safely, with instant AI feedback on fluency, tone, and confidence. Lecturers can create scenarios, set parameters, and see where students struggle most.  
+
+One nursing student told us: *‘I practiced breaking bad news 10 times before placement. I felt prepared instead of terrified.’*  
+
+That’s the value — fail safely, learn, and try again."  
+
+---
+
+## Insight Lens — Your Feedback, Actionable {background-color="#f0fdf4"}
+
+**Narration Script:**  
+"Our second demo is Insight Lens. Normally, student surveys sit in PDFs — hard to analyse, hard to act on. With Insight Lens, you upload those PDFs, and they become interactive dashboards. You can ‘chat’ with the data, generate charts that don’t exist, and even get suggestions for improving your unit.  
+
+In one case, a lecturer discovered 40% of students struggled in Week 3. By fixing that one week, evaluation scores rose 15% the following semester.  
+
+This isn’t about replacing judgement — it’s about amplifying your expertise with clearer insights."  
+
+---
+
+## Quick Win: Static → Interactive {background-color="#e0e7ff"}
+
+**Narration Script:**  
+"Not everything needs a new app. Here’s something you can do tomorrow. Take an FAQ or worksheet, ask an AI to convert it into a simple HTML quiz, and upload it to Blackboard.  
+
+Students get an interactive experience, but you don’t need to code. Everything runs in the browser — no logins, no data leaving their device.  
+
+It’s fast, it’s safe, and it shows AI isn’t just chatbots — it’s a tool to make what we already do more engaging."  
+
+---
+
+## Common Concerns — Quick Answers
+
+**Narration Script:**  
+"Now, I know there are concerns. Let’s tackle them quickly:  
+- **Plagiarism?** AI generates patterns, not copy-paste. Transparency and reflection matter more than the output alone.  
+- **Lazy students?** Design tasks that require critique and process, not just answers.  
+- **Replacing teachers?** AI handles routine; education is still about relationships, mentoring, and critical thinking.  
+- **Data privacy?** Use safe tools. Don’t put sensitive data into consumer AI.  
+
+The calculator analogy still holds: calculators didn’t make mathematicians dumber — they freed them to work on harder problems. AI can do the same."  
+
+---
+
+## Beyond Today: Other Tools in the Toolkit
+
+**Narration Script:**  
+"I’ve shown you two demos and a quick win. But there are many other tools we’re exploring.  
+- **CloudCore** — scenario-based platform for teaching business and security.  
+- **FeedForward** — turning feedback into structured improvement.  
+- **Curriculum Curator** — helping design and align courses.  
+- **Study Buddy** — offline AI tutoring, no accounts needed.  
+- **TechNova-Sim** — interactive cybersecurity simulations.  
+- **Critique Quest** — AI-powered case study generator.  
+
+The point isn’t the number of apps — it’s the breadth of possibilities when AI is used to amplify, not replace, education."  
+
+👉 Explore more: [michaelborck.education/ai](https://michaelborck.education/ai)  
+
+---
+
+## Beyond Teaching: AI in Research
+
+**Narration Script:**  
+"Today we’ve focused on teaching, but AI is also changing how we do research.  
+- Automated transcription and thematic analysis.  
+- Smarter literature review assistance.  
+- Data visualisation and survey analysis.  
+- Drafting and editing for grants and papers.  
+
+The question is whether an AI Facilitator should also support research — and that’s something your poll responses will guide."  
+
+---
+
+## Shaping Our Support {.center}
+
+**Narration Script:**  
+"This is the one poll that matters today. We want to co-design the AI Facilitator role together. What support would be most useful to you?  
+
+Options range from policy guidance and AI literacy, to workshops, assessment design, and even research support. There’s also space to add your own ideas.  
+
+The poll will stay open for a few days. Please take a moment to add your voice — it will directly shape how this role develops in our School."  
+
+👉 Poll: [link + QR code]  
+
+---
+
+## Closing Reflection {.center background-color="#667eea"}
+
+**Narration Script:**  
+"To close: AI isn’t here to replace educators — it’s here to amplify what we already do best.  
+
+We’ve seen how it can support practice, reflection, insight, and even quick wins. But the real question isn’t about the tools — it’s about us.  
+
+So how do *we* take our students from gaps… to gains?"  
+
+👉 Companion resources: [michaelborck.education/ai](https://michaelborck.education/ai)  
